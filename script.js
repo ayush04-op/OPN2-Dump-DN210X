@@ -130,7 +130,47 @@
       list.append(el("p", "empty", "Nothing matches. Try a different search or category."));
       return;
     }
-    shown.forEach((f) => list.append(card(f)));
+    shown.forEach((f, i) => {
+      const c = card(f);
+      c.style.setProperty("--i", Math.min(i, 12));
+      list.append(c);
+    });
+  }
+
+  // Cursor-following glass highlight + scroll reveal
+  function initFx() {
+    document.addEventListener(
+      "pointermove",
+      (e) => {
+        const t = e.target.closest && e.target.closest(".card, .about, .setup .cell");
+        if (!t) return;
+        const r = t.getBoundingClientRect();
+        t.style.setProperty("--mx", e.clientX - r.left + "px");
+        t.style.setProperty("--my", e.clientY - r.top + "px");
+      },
+      { passive: true }
+    );
+
+    const targets = document.querySelectorAll(
+      ".section-head, .toolbar, .chips, details, .log li, .about"
+    );
+    if (!("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.classList.add("in");
+            io.unobserve(en.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    targets.forEach((t, i) => {
+      t.classList.add("reveal");
+      t.style.transitionDelay = (i % 4) * 60 + "ms";
+      io.observe(t);
+    });
   }
 
   function renderGuides(guides) {
@@ -191,6 +231,7 @@
       );
       console.error(err);
     }
+    initFx();
   }
 
   init();
