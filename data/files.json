@@ -1,17 +1,35 @@
 {
   "setup": [
-    { "label": "Device", "value": "OnePlus Nord 2 5G" },
-    { "label": "Model", "value": "DN2101" },
-    { "label": "ROM", "value": "OxygenOS 13 (latest)" },
-    { "label": "Kernel", "value": "Stock" },
-    { "label": "Recovery", "value": "Stock" },
-    { "label": "Root", "value": "Not rooted" }
+    {
+      "label": "Device",
+      "value": "OnePlus Nord 2 5G"
+    },
+    {
+      "label": "Model",
+      "value": "DN2101"
+    },
+    {
+      "label": "ROM",
+      "value": "OxygenOS 13 (latest)"
+    },
+    {
+      "label": "Kernel",
+      "value": "Stock"
+    },
+    {
+      "label": "Recovery",
+      "value": "Stock"
+    },
+    {
+      "label": "Root",
+      "value": "Not rooted"
+    }
   ],
-
   "files": [
     {
       "name": "OxygenOS 13.0.0 Full ROM — F.59",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 13",
       "version": "13.0.0 F.59",
       "size": "",
       "date": "2026-05-19",
@@ -24,7 +42,8 @@
     },
     {
       "name": "OxygenOS 13.0.0 Full ROM — F.50",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 13",
       "version": "13.0.0 F.50",
       "size": "",
       "date": "2024-01-12",
@@ -37,7 +56,8 @@
     },
     {
       "name": "OxygenOS 13.0.0 Full ROM — F.49",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 13",
       "version": "13.0.0 F.49",
       "size": "",
       "date": "2023-12-02",
@@ -50,7 +70,8 @@
     },
     {
       "name": "OxygenOS 13.0.0 Full ROM — F.48",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 13",
       "version": "13.0.0 F.48",
       "size": "",
       "date": "2023-10-12",
@@ -63,7 +84,8 @@
     },
     {
       "name": "OxygenOS 13.0.0 Full ROM — F.47",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 13",
       "version": "13.0.0 F.47",
       "size": "",
       "date": "2023-08-11",
@@ -76,7 +98,8 @@
     },
     {
       "name": "OxygenOS 13.0.0 Full ROM — F.46",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 13",
       "version": "13.0.0 F.46",
       "size": "",
       "date": "2023-07-03",
@@ -89,7 +112,8 @@
     },
     {
       "name": "OxygenOS 11.3 — EU (DN2103)",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 11.3",
       "version": "11.3 A.01",
       "size": "",
       "date": "",
@@ -102,7 +126,8 @@
     },
     {
       "name": "OxygenOS 11.3 — IN (DN2101)",
-      "category": "Firmware",
+      "folder": "stock",
+      "sub": "OxygenOS 11.3",
       "version": "11.3",
       "size": "",
       "date": "",
@@ -113,10 +138,9 @@
       "source": "https://t.me/OPdump/12",
       "sha256": ""
     },
-
     {
       "name": "Evolution X Recovery",
-      "category": "Recoveries",
+      "folder": "recoveries",
       "version": "latest",
       "size": "",
       "date": "",
@@ -129,7 +153,7 @@
     },
     {
       "name": "TWRP 3.7.0_11-0 — denniz",
-      "category": "Recoveries",
+      "folder": "recoveries",
       "version": "3.7.0_11-0",
       "size": "",
       "date": "",
@@ -142,7 +166,7 @@
     },
     {
       "name": "LineageOS Recovery",
-      "category": "Recoveries",
+      "folder": "recoveries",
       "version": "—",
       "size": "",
       "date": "",
@@ -153,10 +177,10 @@
       "source": "https://t.me/OPdump/39",
       "sha256": ""
     },
-
     {
       "name": "Bulletproof denniz — BROM / fastboot restore files",
-      "category": "Tools",
+      "folder": "stock",
+      "sub": "Restore",
       "version": "preloader_ufs_c01 + lk_a20",
       "size": "",
       "date": "",
@@ -169,7 +193,8 @@
     },
     {
       "name": "oplusdownloader (Android app)",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "Downloaders",
       "version": "1.2.0",
       "size": "5.5 MB",
       "date": "",
@@ -182,7 +207,8 @@
     },
     {
       "name": "USB driver (ADB / Fastboot) for MTK devices",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "Drivers",
       "version": "—",
       "size": "8.1 MB",
       "date": "",
@@ -195,7 +221,8 @@
     },
     {
       "name": "OPlus Info Tools",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "System",
       "version": "V1.0 Gen13",
       "size": "3.4 MB",
       "date": "",
@@ -208,7 +235,8 @@
     },
     {
       "name": "Fastboot Firmware Flasher",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "Flashing",
       "version": "latest",
       "size": "",
       "date": "",
@@ -221,7 +249,8 @@
     },
     {
       "name": "MT Manager",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "System",
       "version": "latest",
       "size": "",
       "date": "",
@@ -234,7 +263,8 @@
     },
     {
       "name": "Shizuku",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "Debloat",
       "version": "latest",
       "size": "",
       "date": "",
@@ -247,7 +277,8 @@
     },
     {
       "name": "Canta Debloater",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "Debloat",
       "version": "latest",
       "size": "",
       "date": "",
@@ -260,7 +291,8 @@
     },
     {
       "name": "Android SDK Platform-Tools (ADB / fastboot)",
-      "category": "Tools",
+      "folder": "utilities",
+      "sub": "Flashing",
       "version": "latest",
       "size": "",
       "date": "",
@@ -273,7 +305,8 @@
     },
     {
       "name": "Flashing through MTKClient (auth bypass)",
-      "category": "Tools",
+      "folder": "stock",
+      "sub": "Restore",
       "version": "—",
       "size": "",
       "date": "",
@@ -284,10 +317,10 @@
       "source": "https://t.me/OPdump/40",
       "sha256": ""
     },
-
     {
       "name": "OnePlus OG Icon Pack 1",
-      "category": "Apps",
+      "folder": "vault",
+      "sub": "Icon packs",
       "version": "—",
       "size": "979.5 KB",
       "date": "",
@@ -300,7 +333,8 @@
     },
     {
       "name": "OnePlus OG Icon Pack 2",
-      "category": "Apps",
+      "folder": "vault",
+      "sub": "Icon packs",
       "version": "—",
       "size": "5 MB",
       "date": "",
@@ -313,7 +347,8 @@
     },
     {
       "name": "OnePlus OG Icon Pack 3",
-      "category": "Apps",
+      "folder": "vault",
+      "sub": "Icon packs",
       "version": "—",
       "size": "8.2 MB",
       "date": "",
@@ -326,7 +361,8 @@
     },
     {
       "name": "Fluffy OneUI Icons",
-      "category": "Apps",
+      "folder": "vault",
+      "sub": "Icon packs",
       "version": "2.2.0",
       "size": "98.6 MB",
       "date": "",
@@ -339,7 +375,8 @@
     },
     {
       "name": "OnePlus Messages",
-      "category": "Apps",
+      "folder": "vault",
+      "sub": "Apps",
       "version": "7.112.0",
       "size": "57.5 MB",
       "date": "",
@@ -350,10 +387,10 @@
       "source": "",
       "sha256": ""
     },
-
     {
       "name": "Vela Maps",
-      "category": "Extras",
+      "folder": "vault",
+      "sub": "Apps",
       "version": "latest",
       "size": "",
       "date": "",
@@ -366,7 +403,8 @@
     },
     {
       "name": "Online music player apps (list)",
-      "category": "Extras",
+      "folder": "vault",
+      "sub": "Apps",
       "version": "—",
       "size": "",
       "date": "",
@@ -379,7 +417,8 @@
     },
     {
       "name": "iOS-style liquid glass theme for Telegram",
-      "category": "Extras",
+      "folder": "vault",
+      "sub": "Themes",
       "version": "—",
       "size": "",
       "date": "",
@@ -389,9 +428,21 @@
       "url": "https://t.me/addtheme/MM63tEnjfp5gMbk2",
       "source": "https://t.me/OPdump/20",
       "sha256": ""
+    },
+    {
+      "name": "Magisk",
+      "folder": "root",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "topjohnwu",
+      "status": "untested",
+      "notes": "Official releases page. I'm not rooted on my main setup, so this is listed for reference.",
+      "url": "https://github.com/topjohnwu/Magisk/releases",
+      "source": "https://github.com/topjohnwu/Magisk",
+      "sha256": ""
     }
   ],
-
   "guides": [
     {
       "title": "Before you flash anything",
@@ -454,8 +505,12 @@
       ]
     }
   ],
-
   "changelog": [
+    {
+      "date": "2026-10-14",
+      "title": "Files organised into folders",
+      "desc": "Split the file list into ROMs, Recoveries, Root, Stock, Personal Vault and Utilities."
+    },
     {
       "date": "2026-10-14",
       "title": "Added files from my Telegram channel",
@@ -465,6 +520,44 @@
       "date": "2026-10-14",
       "title": "Vault created",
       "desc": "Set up the repository and website for my Nord 2 (DN2101), currently on the latest OxygenOS 13."
+    }
+  ],
+  "folders": [
+    {
+      "id": "roms",
+      "name": "ROMs",
+      "icon": "💿",
+      "desc": "Custom ROMs for the Nord 2"
+    },
+    {
+      "id": "recoveries",
+      "name": "Recoveries",
+      "icon": "🛠️",
+      "desc": "TWRP, Evolution X and other recovery images"
+    },
+    {
+      "id": "root",
+      "name": "Root",
+      "icon": "🔓",
+      "desc": "Root tools and boot image patching"
+    },
+    {
+      "id": "stock",
+      "name": "Stock",
+      "icon": "📦",
+      "desc": "Stock OxygenOS firmware and restore files"
+    },
+    {
+      "id": "vault",
+      "name": "Personal Vault",
+      "icon": "✨",
+      "desc": "Icon packs, themes, apps and extras that aren't device specific"
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "icon": "🧰",
+      "desc": "Downloaders, drivers and flashing tools"
     }
   ]
 }

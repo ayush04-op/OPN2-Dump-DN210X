@@ -21,12 +21,15 @@ My personal collection of ROMs, kernels, recoveries, firmware and tools for the 
 
 ## What's inside
 
-- **Firmware:** OxygenOS 13 builds (F.46 to F.59) and OxygenOS 11.3 for EU and IN models
-- **Recoveries:** Evolution X, TWRP (LineageOS coming soon)
-- **Tools:** BROM / fastboot restore files, USB drivers, oplusdownloader, OPlus Info Tools, Shizuku, Canta and more
-- **Apps:** icon packs and OnePlus Messages
-- **Guides:** revert to stock, restore BROM / fastboot, debloat without root
-- **Changelog:** a dated log of what I added and changed
+The website groups everything into folders:
+
+- 💿 **ROMs:** custom ROMs (coming soon)
+- 🛠️ **Recoveries:** Evolution X, TWRP (LineageOS coming soon)
+- 🔓 **Root:** Magisk and boot image tools
+- 📦 **Stock:** OxygenOS 13 builds (F.46 to F.59), OxygenOS 11.3 for EU and IN, and BROM / fastboot restore files
+- ✨ **Personal Vault:** icon packs, themes, apps and extras that aren't device specific
+- 🧰 **Utilities:** downloaders, drivers, platform-tools, Shizuku, Canta and flashing tools
+- **Guides** and a dated **Changelog**
 
 ## My current setup
 

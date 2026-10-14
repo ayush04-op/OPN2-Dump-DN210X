@@ -54,7 +54,7 @@
     </div>
 
     <div class="toolbar">
-      <input id="search" type="search" placeholder="Search files, versions, notes…" aria-label="Search files" autocomplete="off">
+      <input id="search" type="search" placeholder="Search all files, or inside the open folder…" aria-label="Search files" autocomplete="off">
       <select id="status" aria-label="Filter by status">
         <option value="all">All statuses</option>
         <option value="daily">✅ Daily driver</option>
@@ -64,11 +64,13 @@
       </select>
     </div>
 
-    <div class="chips" id="chips" role="tablist" aria-label="Categories"></div>
+    <div class="crumbs" id="crumbs" hidden></div>
 
-    <div class="list" id="list" aria-live="polite">
-      <p class="empty">Loading files…</p>
-    </div>
+    <div class="folders" id="folders" aria-label="Folders"></div>
+
+    <div class="chips" id="chips" aria-label="Sections in this folder" hidden></div>
+
+    <div class="list" id="list" aria-live="polite" hidden></div>
   </section>
 
   <section class="wrap" id="guides">
@@ -89,6 +91,7 @@
       <p class="warn"><strong>⚠ Disclaimer:</strong> Flashing custom software can brick your device, void your warranty or cause data loss. Everything here is provided as is, with no warranty. Back up your data and flash at your own risk.</p>
       <p>
         <a class="btn" href="https://github.com/ayush04-op/OPN2-Dump-DN210X" target="_blank" rel="noopener">GitHub repo</a>
+        <a class="btn ghost" href="https://t.me/OPdump" target="_blank" rel="noopener">Telegram channel</a>
         <a class="btn ghost" href="https://github.com/ayush04-op/OPN2-Dump-DN210X/issues" target="_blank" rel="noopener">Report an issue</a>
       </p>
     </div>
