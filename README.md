@@ -3,7 +3,7 @@
 
 My personal collection of ROMs, kernels, recoveries, firmware and tools for the **OnePlus Nord 2 5G (DN2101 / DN2103)**. Everything listed here is something I have used, tested, or kept as a backup for my own device.
 
-🌐 **Website:** https://ayush04-op.github.io/YOUR-REPO-NAME/
+🌐 **Website:** https://ayush04-op.github.io/OPN2-Dump-DN210X/
 
 ---
 
