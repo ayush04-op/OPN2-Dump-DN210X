@@ -1,0 +1,470 @@
+{
+  "setup": [
+    { "label": "Device", "value": "OnePlus Nord 2 5G" },
+    { "label": "Model", "value": "DN2101" },
+    { "label": "ROM", "value": "OxygenOS 13 (latest)" },
+    { "label": "Kernel", "value": "Stock" },
+    { "label": "Recovery", "value": "Stock" },
+    { "label": "Root", "value": "Not rooted" }
+  ],
+
+  "files": [
+    {
+      "name": "OxygenOS 13.0.0 Full ROM — F.59",
+      "category": "Firmware",
+      "version": "13.0.0 F.59",
+      "size": "",
+      "date": "2026-05-19",
+      "author": "OnePlus",
+      "status": "daily",
+      "notes": "Newest build in my list. Direct link from OnePlus's OTA server, which can expire, so the Telegram post is the fallback.",
+      "url": "https://gauss-componentotamanual.allawnofs.com/remove-6e0fa5d37cb942203325ee10a216fc9c/component-ota/26/05/19/446fc5f173be436f848d7f507c79706e.zip",
+      "source": "https://t.me/OPdump/24",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 13.0.0 Full ROM — F.50",
+      "category": "Firmware",
+      "version": "13.0.0 F.50",
+      "size": "",
+      "date": "2024-01-12",
+      "author": "OnePlus",
+      "status": "tested",
+      "notes": "Newest build that works with the BROM / fastboot restore method (F.50 or lower is required).",
+      "url": "https://gauss-componentotacostmanual-in.allawnofs.com/remove-8e42bca838b169047d364e4117b5cca1/component-ota/24/01/12/de78322e7b614f56a0c139eb2e195f19.zip",
+      "source": "https://t.me/OPdump/24",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 13.0.0 Full ROM — F.49",
+      "category": "Firmware",
+      "version": "13.0.0 F.49",
+      "size": "",
+      "date": "2023-12-02",
+      "author": "OnePlus",
+      "status": "untested",
+      "notes": "Older build, kept for downgrade or testing.",
+      "url": "https://gauss-componentotacostmanual-in.allawnofs.com/remove-96ab364d29be35a1d4bba65e5d71fb5c/component-ota/23/12/02/a6524192bf0645e2aa37605154276662.zip",
+      "source": "https://t.me/OPdump/24",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 13.0.0 Full ROM — F.48",
+      "category": "Firmware",
+      "version": "13.0.0 F.48",
+      "size": "",
+      "date": "2023-10-12",
+      "author": "OnePlus",
+      "status": "untested",
+      "notes": "Older build, kept for downgrade or testing.",
+      "url": "https://gauss-componentotacostmanual-in.allawnofs.com/remove-f08ba1f6a19a67d198864f02b5323286/component-ota/23/10/12/9c5ea8983d604e1e8805623042cd0a67.zip",
+      "source": "https://t.me/OPdump/24",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 13.0.0 Full ROM — F.47",
+      "category": "Firmware",
+      "version": "13.0.0 F.47",
+      "size": "",
+      "date": "2023-08-11",
+      "author": "OnePlus",
+      "status": "untested",
+      "notes": "Older build, kept for downgrade or testing.",
+      "url": "https://gauss-componentotacostmanual-in.allawnofs.com/remove-02c5266852fb33a7129a8f59bcb346ac/component-ota/23/08/11/e596eddc07984fa7a75284bf89deabc5.zip",
+      "source": "https://t.me/OPdump/24",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 13.0.0 Full ROM — F.46",
+      "category": "Firmware",
+      "version": "13.0.0 F.46",
+      "size": "",
+      "date": "2023-07-03",
+      "author": "OnePlus",
+      "status": "untested",
+      "notes": "Oldest build in my list.",
+      "url": "https://gauss-componentotacostmanual-in.allawnofs.com/remove-8b8dc8fcd6194eed9ae89b9e02f5a233/component-ota/23/07/03/2dbee3b65421427ba091750ee01b6b66.zip",
+      "source": "https://t.me/OPdump/24",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 11.3 — EU (DN2103)",
+      "category": "Firmware",
+      "version": "11.3 A.01",
+      "size": "",
+      "date": "",
+      "author": "OnePlus",
+      "status": "untested",
+      "notes": "Stock ROM for the EU model. Used when reverting from an AOSP custom ROM back to stock.",
+      "url": "https://drive.google.com/file/d/19jHWGNeCkdBTZWtCab4NoESf6ayKwEtn/view?usp=drivesdk",
+      "source": "https://t.me/OPdump/12",
+      "sha256": ""
+    },
+    {
+      "name": "OxygenOS 11.3 — IN (DN2101)",
+      "category": "Firmware",
+      "version": "11.3",
+      "size": "",
+      "date": "",
+      "author": "OnePlus",
+      "status": "untested",
+      "notes": "Stock ROM for the Indian model. Used when reverting to stock, or when moving from DN2103 firmware to DN2101.",
+      "url": "https://drive.google.com/file/d/1uw2s2yNxm3-eECvSoZghxLrtu3JcJHWO/view?usp=drivesdk",
+      "source": "https://t.me/OPdump/12",
+      "sha256": ""
+    },
+
+    {
+      "name": "Evolution X Recovery",
+      "category": "Recoveries",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "Evolution X",
+      "status": "untested",
+      "notes": "Recovery image for the denniz (op6893) from the Evolution X servers.",
+      "url": "https://cdn.evolution-x.org/op6893/16/recovery/recovery.img",
+      "source": "https://t.me/OPdump/39",
+      "sha256": ""
+    },
+    {
+      "name": "TWRP 3.7.0_11-0 — denniz",
+      "category": "Recoveries",
+      "version": "3.7.0_11-0",
+      "size": "",
+      "date": "",
+      "author": "TWRP",
+      "status": "untested",
+      "notes": "Official TWRP build for the Nord 2.",
+      "url": "https://dl.twrp.me/denniz/twrp-3.7.0_11-0-denniz.img",
+      "source": "https://t.me/OPdump/39",
+      "sha256": ""
+    },
+    {
+      "name": "LineageOS Recovery",
+      "category": "Recoveries",
+      "version": "—",
+      "size": "",
+      "date": "",
+      "author": "LineageOS",
+      "status": "untested",
+      "notes": "Coming soon.",
+      "url": "",
+      "source": "https://t.me/OPdump/39",
+      "sha256": ""
+    },
+
+    {
+      "name": "Bulletproof denniz — BROM / fastboot restore files",
+      "category": "Tools",
+      "version": "preloader_ufs_c01 + lk_a20",
+      "size": "",
+      "date": "",
+      "author": "giovix92 (hosting) · BROM bypass found by @NishantKumar6342",
+      "status": "tested",
+      "notes": "Makes the phone brick-proof by restoring preloader and lk. Needs OxygenOS F.50 or lower with USB debugging on. See the guide below.",
+      "url": "https://sourceforge.net/projects/giovix92-builds/files/denniz/extras/bulletproof_denniz.zip/download",
+      "source": "https://t.me/OPdump/18",
+      "sha256": ""
+    },
+    {
+      "name": "oplusdownloader (Android app)",
+      "category": "Tools",
+      "version": "1.2.0",
+      "size": "5.5 MB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "Download OTA / full ROM files without any hassle.",
+      "url": "https://t.me/OPdump/5",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "USB driver (ADB / Fastboot) for MTK devices",
+      "category": "Tools",
+      "version": "—",
+      "size": "8.1 MB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "Windows driver pack for ADB and fastboot on MediaTek phones.",
+      "url": "https://t.me/OPdump/7",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "OPlus Info Tools",
+      "category": "Tools",
+      "version": "V1.0 Gen13",
+      "size": "3.4 MB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "System info overview for OPPO, realme and OnePlus devices with one-tap copy. Needs ColorOS 11 / OxygenOS 11 / realme UI 2.0 and Android 11 or newer.",
+      "url": "https://t.me/OPdump/25",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "Fastboot Firmware Flasher",
+      "category": "Tools",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "see channel",
+      "status": "untested",
+      "notes": "Windows app to flash OEM or custom ROMs, patch KSU images, unpack firmware and more. Credit goes to the author.",
+      "url": "https://t.me/fastbootfirmwareflasher",
+      "source": "https://t.me/OPdump/38",
+      "sha256": ""
+    },
+    {
+      "name": "MT Manager",
+      "category": "Tools",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "Multi-purpose file manager. Works with Shizuku or root.",
+      "url": "https://t.me/mtmanager",
+      "source": "https://t.me/OPdump/32",
+      "sha256": ""
+    },
+    {
+      "name": "Shizuku",
+      "category": "Tools",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "RikkaApps",
+      "status": "untested",
+      "notes": "Lets other apps use ADB-level access without root. Needed for the debloating guide.",
+      "url": "https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api",
+      "source": "https://t.me/OPdump/37",
+      "sha256": ""
+    },
+    {
+      "name": "Canta Debloater",
+      "category": "Tools",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "samolego",
+      "status": "untested",
+      "notes": "Uninstall system apps through Shizuku. Only remove packages marked Recommended.",
+      "url": "https://play.google.com/store/apps/details?id=io.github.samolego.canta",
+      "source": "https://t.me/OPdump/37",
+      "sha256": ""
+    },
+    {
+      "name": "Android SDK Platform-Tools (ADB / fastboot)",
+      "category": "Tools",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "Google",
+      "status": "daily",
+      "notes": "Needed for every flashing guide on this site. Always download it from the official Google page.",
+      "url": "https://developer.android.com/tools/releases/platform-tools",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "Flashing through MTKClient (auth bypass)",
+      "category": "Tools",
+      "version": "—",
+      "size": "",
+      "date": "",
+      "author": "Hovatek forum",
+      "status": "untested",
+      "notes": "Forum thread about recovering a bricked Nord 2 with MTKClient.",
+      "url": "https://www.hovatek.com/forum/thread-49466.html",
+      "source": "https://t.me/OPdump/40",
+      "sha256": ""
+    },
+
+    {
+      "name": "OnePlus OG Icon Pack 1",
+      "category": "Apps",
+      "version": "—",
+      "size": "979.5 KB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "Original OnePlus style icon pack.",
+      "url": "https://t.me/OPdump/27",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "OnePlus OG Icon Pack 2",
+      "category": "Apps",
+      "version": "—",
+      "size": "5 MB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "Original OnePlus style icon pack.",
+      "url": "https://t.me/OPdump/28",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "OnePlus OG Icon Pack 3",
+      "category": "Apps",
+      "version": "—",
+      "size": "8.2 MB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "Original OnePlus style icon pack.",
+      "url": "https://t.me/OPdump/29",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "Fluffy OneUI Icons",
+      "category": "Apps",
+      "version": "2.2.0",
+      "size": "98.6 MB",
+      "date": "",
+      "author": "",
+      "status": "untested",
+      "notes": "One UI style icon pack.",
+      "url": "https://t.me/OPdump/30",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "OnePlus Messages",
+      "category": "Apps",
+      "version": "7.112.0",
+      "size": "57.5 MB",
+      "date": "",
+      "author": "OnePlus (extracted)",
+      "status": "untested",
+      "notes": "Extracted from OxygenOS 11.",
+      "url": "https://t.me/OPdump/33",
+      "source": "",
+      "sha256": ""
+    },
+
+    {
+      "name": "Vela Maps",
+      "category": "Extras",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "pimpinpumpkin",
+      "status": "untested",
+      "notes": "Free and open source alternative to Google Maps. No account, no tracking.",
+      "url": "https://pimpinpumpkin.github.io/Vela/",
+      "source": "https://t.me/OPdump/36",
+      "sha256": ""
+    },
+    {
+      "name": "Online music player apps (list)",
+      "category": "Extras",
+      "version": "—",
+      "size": "",
+      "date": "",
+      "author": "various",
+      "status": "untested",
+      "notes": "BitChord, MusicSM, Orb, ArchiveTune, Metrolist, SoundPod, ViViMusic, BeatWave, PixelMusicApp, SimpMusic, Aura Music and MusicOS26. All links are in the Telegram post.",
+      "url": "https://t.me/OPdump/34",
+      "source": "",
+      "sha256": ""
+    },
+    {
+      "name": "iOS-style liquid glass theme for Telegram",
+      "category": "Extras",
+      "version": "—",
+      "size": "",
+      "date": "",
+      "author": "@Itz_0674",
+      "status": "untested",
+      "notes": "Telegram theme with a liquid glass effect. Works on A12+ devices. Settings screenshot is in the post.",
+      "url": "https://t.me/addtheme/MM63tEnjfp5gMbk2",
+      "source": "https://t.me/OPdump/20",
+      "sha256": ""
+    }
+  ],
+
+  "guides": [
+    {
+      "title": "Before you flash anything",
+      "steps": [
+        "Charge the phone to at least 60%.",
+        "Back up photos, chats and app data to your PC or cloud.",
+        "Note your exact model (DN2101 or DN2103) under Settings → About phone.",
+        "Download only files made for your model.",
+        "Install the latest ADB / fastboot platform-tools on your PC."
+      ]
+    },
+    {
+      "title": "Revert from an AOSP custom ROM to stock",
+      "steps": [
+        "Note your device model in Settings → About phone.",
+        "Download the stock ROM for your model from the Firmware section (EU DN2103 or IN DN2101).",
+        "Install platform-tools on your PC and open a terminal in that folder.",
+        "On the phone, reboot to the AOSP recovery and choose Apply Update → Using ADB.",
+        "On the PC run: adb devices",
+        "Then run: adb sideload oplus_ota_downgrade.zip",
+        "If your custom ROM was based on DN2103 (EU) firmware, flash the EU stock ROM first.",
+        "When flashing is done, format data and reboot to system.",
+        "Check that everything works: Wi-Fi, Bluetooth, audio and so on.",
+        "Only if you want to lock the bootloader and you are fully back on stock: reboot to the bootloader and run fastboot flashing lock."
+      ]
+    },
+    {
+      "title": "Switch from DN2103 to DN2101 firmware (India users, optional)",
+      "steps": [
+        "You need an unlocked bootloader and a full data backup, because this erases everything.",
+        "In Settings, turn off network access for the Software Update app so it can't push OTA updates meanwhile.",
+        "Enable Developer options by tapping the version number 5 to 6 times.",
+        "Open Software Update, tap the three dots and choose Local install.",
+        "Select the OxygenOS 11.3 IN ROM, install it and reboot."
+      ]
+    },
+    {
+      "title": "Restore BROM / fastboot (make the phone brick-proof)",
+      "steps": [
+        "Credit: @NishantKumar6342 discovered this BROM bypass.",
+        "You need a fully charged phone, OxygenOS F.50 or lower (tested) with USB debugging on, and the bulletproof_denniz zip from the Tools section.",
+        "Extract the zip and open a terminal inside the folder.",
+        "Run: adb reboot fastboot",
+        "Run: fastboot flash sda preloader_ufs_c01.img",
+        "Run: fastboot flash sdb preloader_ufs_c01.img",
+        "Run: fastboot flash lk lk_a20.bin",
+        "Run: fastboot flash lk2 lk2_a20.bin",
+        "Run: fastboot reboot"
+      ]
+    },
+    {
+      "title": "Debloat with Shizuku and Canta (no root)",
+      "steps": [
+        "Install Shizuku and Canta Debloater from the Tools section.",
+        "Enable Wireless debugging in Developer options.",
+        "Pair Shizuku with your device using the official Shizuku setup guide.",
+        "Give Canta access in Shizuku.",
+        "Open Canta, select the apps you want to remove and tap Uninstall.",
+        "Warning: only remove apps marked Recommended. Removing core system packages can crash your system."
+      ]
+    }
+  ],
+
+  "changelog": [
+    {
+      "date": "2026-10-14",
+      "title": "Added files from my Telegram channel",
+      "desc": "Imported firmware, recoveries, tools, apps and guides from the OPN2-Dump channel."
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Vault created",
+      "desc": "Set up the repository and website for my Nord 2 (DN2101), currently on the latest OxygenOS 13."
+    }
+  ]
+}
