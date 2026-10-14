@@ -1,4 +1,6 @@
 (() => {
+  const TABS = ["files", "guides", "changelog", "about"];
+
   const STATUS_LABEL = {
     daily: "✅ Daily driver",
     tested: "🟢 Tested",
@@ -6,7 +8,7 @@
     untested: "⚪ Untested",
   };
 
-  const state = { q: "", status: "all", folder: null, sub: "All", files: [], folders: [] };
+  const state = { tab: "files", q: "", status: "all", folder: null, sub: "All", files: [], folders: [], guides: [] };
 
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => {
@@ -30,6 +32,16 @@
     }
   };
 
+  const extLink = (cls, label, url) => {
+    const href = safeUrl(url);
+    if (!href) return null;
+    const a = el("a", cls, label);
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    return a;
+  };
+
   /* ───────── Setup panel ───────── */
   function renderSetup(setup) {
     const box = $("setup");
@@ -41,24 +53,50 @@
     });
   }
 
-  /* ───────── Routing (#f/<folder-id>) so the browser back button works ───────── */
+  /* ───────── Routing: #files, #guides, #changelog, #about, #f/<folder-id> ───────── */
   function readHash() {
-    const m = /^#f\/([\w-]+)/.exec(location.hash);
-    state.folder = m && folderById(m[1]) ? m[1] : null;
-    state.sub = "All";
+    const h = location.hash;
+    const m = /^#f\/([\w-]+)/.exec(h);
+    if (m && folderById(m[1])) {
+      state.tab = "files";
+      state.folder = m[1];
+      state.sub = "All";
+      return;
+    }
+    const t = h.replace("#", "");
+    if (TABS.includes(t)) {
+      state.tab = t;
+      state.folder = null;
+      state.sub = "All";
+    } else if (!h || h === "#") {
+      state.tab = "files";
+      state.folder = null;
+      state.sub = "All";
+    }
+    // Any other hash is ignored, so the current tab stays put.
   }
 
-  function openFolder(id) {
-    location.hash = "f/" + id;
-  }
-
-  function goRoot() {
+  const goRoot = () => {
     location.hash = "files";
-  }
+  };
+  const openFolder = (id) => {
+    location.hash = "f/" + id;
+  };
+  const toTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  function scrollToFiles() {
-    const s = $("files");
-    if (s) s.scrollIntoView({ behavior: "smooth", block: "start" });
+  /* ───────── Tabs ───────── */
+  function showTab() {
+    document.querySelectorAll("[data-panel]").forEach((p) => {
+      p.hidden = p.dataset.panel !== state.tab;
+    });
+    document.querySelectorAll("#nav a").forEach((a) => {
+      const on = a.dataset.tab === state.tab;
+      a.classList.toggle("active", on);
+      if (on) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    // The intro banner only belongs on the Files home view
+    $("hero").hidden = !(state.tab === "files" && !state.folder);
   }
 
   /* ───────── Filtering ───────── */
@@ -68,7 +106,10 @@
     if (state.status !== "all" && f.status !== state.status) return false;
     if (!state.q) return true;
     const fo = folderById(f.folder);
-    const hay = [f.name, f.version, f.sub, f.notes, f.author, f.status, fo && fo.name].join(" ").toLowerCase();
+    const linkText = (f.links || []).map((l) => l.label).join(" ");
+    const hay = [f.name, f.version, f.android, f.kind, f.sub, f.notes, f.author, f.status, linkText, fo && fo.name]
+      .join(" ")
+      .toLowerCase();
     return state.q.split(/\s+/).every((w) => hay.includes(w));
   }
 
@@ -83,12 +124,12 @@
       b.style.setProperty("--i", i);
       b.setAttribute("aria-label", "Open folder " + fo.name);
 
-      const icon = el("span", "folder-icon", fo.icon || "📁");
-      const name = el("span", "folder-name", fo.name);
-      const desc = el("span", "folder-desc", fo.desc || "");
-      const count = el("span", "folder-count" + (n ? "" : " empty-folder"), n ? n + (n === 1 ? " file" : " files") : "Empty");
-
-      b.append(icon, name, desc, count);
+      b.append(
+        el("span", "folder-icon", fo.icon || "📁"),
+        el("span", "folder-name", fo.name),
+        el("span", "folder-desc", fo.desc || ""),
+        el("span", "folder-count" + (n ? "" : " empty-folder"), n ? n + (n === 1 ? " file" : " files") : "Empty")
+      );
       b.addEventListener("click", () => openFolder(fo.id));
       box.append(b);
     });
@@ -106,7 +147,11 @@
     back.addEventListener("click", goRoot);
 
     const trail = el("div", "crumb-trail");
-    trail.append(el("span", "crumb-root", "Files"), el("span", "crumb-sep", "/"), el("span", "crumb-now", (fo.icon || "") + " " + fo.name));
+    trail.append(
+      el("span", "crumb-root", "Files"),
+      el("span", "crumb-sep", "/"),
+      el("span", "crumb-now", (fo.icon || "") + " " + fo.name)
+    );
 
     box.append(back, trail);
     if (fo.desc) box.append(el("p", "crumb-desc", fo.desc));
@@ -152,11 +197,13 @@
     } else if (f.sub) {
       h.append(el("span", "tag cat", f.sub));
     }
+    if (f.kind) h.append(el("span", "tag kind", f.kind));
     if (STATUS_LABEL[f.status]) h.append(el("span", "tag " + f.status, STATUS_LABEL[f.status]));
     left.append(h);
 
     const meta = el("div", "meta");
-    if (f.version) meta.append(el("span", "", "v " + f.version));
+    if (f.android) meta.append(el("span", "", "Android " + f.android));
+    if (f.version && f.version !== "—") meta.append(el("span", "", /^\d/.test(f.version) ? "v " + f.version : f.version));
     if (f.size) meta.append(el("span", "", f.size));
     if (f.date) meta.append(el("span", "", f.date));
     if (f.author) meta.append(el("span", "", "by " + f.author));
@@ -178,31 +225,21 @@
       });
       actions.append(copy);
     }
-    const href = safeUrl(f.url);
-    if (href) {
-      const a = el("a", "btn", "Download");
-      a.href = href;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      actions.append(a);
-    } else {
-      actions.append(el("span", "btn disabled", "Link soon"));
-    }
-    const src = safeUrl(f.source);
-    if (src) {
-      const s = el("a", "btn ghost", "Source");
-      s.href = src;
-      s.target = "_blank";
-      s.rel = "noopener noreferrer";
-      actions.append(s);
-    }
+    const dl = extLink("btn", "Download", f.url);
+    actions.append(dl || el("span", "btn disabled", "Link soon"));
+    const src = extLink("btn ghost", "Source", f.source);
+    if (src) actions.append(src);
+    (f.links || []).forEach((l) => {
+      const a = extLink("btn ghost small", l.label, l.url);
+      if (a) actions.append(a);
+    });
 
     c.append(left, actions);
     if (f.notes) c.append(el("p", "notes", f.notes));
     return c;
   }
 
-  /* ───────── Main render ───────── */
+  /* ───────── Files tab render ───────── */
   function renderList() {
     const list = $("list");
     const inFolder = !!state.folder;
@@ -210,16 +247,17 @@
     const shown = state.files.filter(matches);
 
     list.replaceChildren();
-
     if (!inFolder && !searching) return;
 
     if (!shown.length) {
       const total = inFolder ? filesIn(state.folder).length : 0;
-      const msg =
-        inFolder && total === 0
-          ? "Nothing in this folder yet. Coming soon."
-          : "Nothing matches. Try a different search or filter.";
-      list.append(el("p", "empty", msg));
+      list.append(
+        el(
+          "p",
+          "empty",
+          inFolder && total === 0 ? "Nothing in this folder yet. Coming soon." : "Nothing matches. Try a different search or filter."
+        )
+      );
     } else {
       shown.forEach((f, i) => {
         const c = card(f, !inFolder);
@@ -233,7 +271,7 @@
       : shown.length + " of " + state.files.length + " files";
   }
 
-  function render() {
+  function renderFiles() {
     const inFolder = !!state.folder;
     const searching = !inFolder && (state.q || state.status !== "all");
 
@@ -250,20 +288,70 @@
     }
   }
 
-  /* ───────── Guides + changelog ───────── */
+  function render() {
+    showTab();
+    renderFiles();
+  }
+
+  /* ───────── Guides ───────── */
+  function block(title, node) {
+    const wrap = el("div", "g-block");
+    wrap.append(el("h4", "", title), node);
+    return wrap;
+  }
+
   function renderGuides(guides) {
     const box = $("guideList");
     box.replaceChildren();
+    $("guideCount").textContent = (guides || []).length + " guides";
+
     (guides || []).forEach((g) => {
-      const d = el("details");
-      d.append(el("summary", "", g.title));
-      const ol = el("ol");
-      (g.steps || []).forEach((s) => ol.append(el("li", "", s)));
-      d.append(ol);
+      const d = el("details", "guide");
+
+      const sum = el("summary");
+      const title = el("span", "g-title");
+      title.append(el("span", "g-name", g.title));
+      if (g.summary) title.append(el("span", "g-sum", g.summary));
+      sum.append(title);
+      d.append(sum);
+
+      const body = el("div", "g-body");
+
+      if (g.prereqs && g.prereqs.length) {
+        const ul = el("ul", "g-list");
+        g.prereqs.forEach((p) => ul.append(el("li", "", p)));
+        body.append(block("You will need", ul));
+      }
+      if (g.steps && g.steps.length) {
+        const ol = el("ol", "g-steps");
+        g.steps.forEach((s) => ol.append(el("li", "", s)));
+        body.append(block("Steps", ol));
+      }
+      (g.warnings || []).forEach((w) => {
+        const warn = el("div", "g-warn");
+        warn.append(el("strong", "", "⚠ Watch out. "), document.createTextNode(w));
+        body.append(warn);
+      });
+      if (g.credit) body.append(el("p", "g-credit", g.credit));
+
+      const actions = el("div", "g-actions");
+      (g.links || []).forEach((l) => {
+        const a = extLink("btn ghost small", l.label + " ↗", l.url);
+        if (a) actions.append(a);
+      });
+      (g.related || []).forEach((r) => {
+        const a = el("a", "btn ghost small", r.label);
+        a.href = r.folder ? "#f/" + r.folder : "#" + (r.tab || "files");
+        actions.append(a);
+      });
+      if (actions.childNodes.length) body.append(actions);
+
+      d.append(body);
       box.append(d);
     });
   }
 
+  /* ───────── Changelog ───────── */
   function renderLog(log) {
     const ol = $("logList");
     ol.replaceChildren();
@@ -271,7 +359,20 @@
       const li = el("li");
       li.append(el("div", "date", e.date), el("div", "title", e.title));
       if (e.desc) li.append(el("p", "desc", e.desc));
+      if (e.items && e.items.length) {
+        const ul = el("ul", "log-items");
+        e.items.forEach((t) => ul.append(el("li", "", t)));
+        li.append(ul);
+      }
       ol.append(li);
+    });
+  }
+
+  /* ───────── About: live folder counts ───────── */
+  function renderAboutCounts() {
+    document.querySelectorAll("[data-folder-count]").forEach((s) => {
+      const n = filesIn(s.dataset.folderCount).length;
+      s.textContent = n ? "(" + n + (n === 1 ? " file)" : " files)") : "(empty)";
     });
   }
 
@@ -290,8 +391,9 @@
     );
 
     if (!("IntersectionObserver" in window)) return;
-    // Only elements that are always visible (never display:none) can be revealed safely.
-    const targets = document.querySelectorAll(".section-head, .toolbar, details, .log li, .about");
+    const targets = document.querySelectorAll(
+      ".section-head, .toolbar, .panel-intro, .guide, .log li, .about, .about-links"
+    );
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((en) => {
@@ -301,7 +403,7 @@
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
     targets.forEach((t, i) => {
       t.classList.add("reveal");
@@ -313,40 +415,49 @@
   function bind() {
     $("search").addEventListener("input", (e) => {
       state.q = e.target.value.trim().toLowerCase();
-      render();
+      renderFiles();
     });
     $("status").addEventListener("change", (e) => {
       state.status = e.target.value;
-      render();
+      renderFiles();
     });
     window.addEventListener("hashchange", () => {
-      const wasFolder = state.folder;
       readHash();
       render();
-      if (state.folder || wasFolder) scrollToFiles();
+      toTop();
     });
+    // "Back to top" shouldn't change the tab
+    document.querySelectorAll('a[href="#top"]').forEach((a) =>
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        toTop();
+      })
+    );
   }
 
   async function init() {
     $("year").textContent = new Date().getFullYear();
     bind();
+    readHash();
+    showTab();
+    $("folders").replaceChildren(el("p", "empty", "Loading files…"));
+
     try {
       const res = await fetch("data/files.json", { cache: "no-cache" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const data = await res.json();
       state.files = data.files || [];
       state.folders = data.folders || [];
+      state.guides = data.guides || [];
       renderSetup(data.setup);
       renderFolders();
-      readHash();
+      readHash(); // folders are known now, so #f/<id> links resolve
       render();
       renderGuides(data.guides);
       renderLog(data.changelog);
-      if (state.folder) setTimeout(scrollToFiles, 150);
+      renderAboutCounts();
     } catch (err) {
-      $("folders").hidden = true;
-      $("list").hidden = false;
-      $("list").replaceChildren(
+      $("folders").replaceChildren(
         el(
           "p",
           "empty",

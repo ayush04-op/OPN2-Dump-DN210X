@@ -29,7 +29,9 @@ The website groups everything into folders:
 - 📦 **Stock:** OxygenOS 13 builds (F.46 to F.59), OxygenOS 11.3 for EU and IN, and BROM / fastboot restore files
 - ✨ **Personal Vault:** icon packs, themes, apps and extras that aren't device specific
 - 🧰 **Utilities:** downloaders, drivers, platform-tools, Shizuku, Canta and flashing tools
-- **Guides** and a dated **Changelog**
+- **Guides**, a dated **Changelog** and an **About** tab with device specs, model variants and credits
+
+The site has four tabs: Files, Guides, Changelog and About.
 
 ## My current setup
 

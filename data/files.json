@@ -27,6 +27,1014 @@
   ],
   "files": [
     {
+      "name": "Evolution X 11.9 — Official",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Official",
+      "version": "11.9",
+      "android": "16 (QPR2)",
+      "size": "",
+      "date": "2026-07-31",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Official build for the Nord 2 and realme X7 Max (op6893). Userdebug, signed, vanilla kernel. Because of the move to official signing keys, only builds after this one install as system updates.",
+      "url": "https://cdn.evolution-x.org/op6893/16",
+      "source": "https://t.me/OnePlusNord2Updates/205",
+      "sha256": "50d1918d2229035ffd22ab6b04f792ab9bf6c9692be866f820b5324018ed9615",
+      "links": [
+        {
+          "label": "XDA thread",
+          "url": "https://xdaforums.com/t/rom-op6893-a16-evolutionx-official-for-oneplus-nord-2-5g-and-realme-x7-max-5g.4796652"
+        },
+        {
+          "label": "Source",
+          "url": "https://github.com/Evolution-X/manifest/tree/bka"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 11.8 — Unofficial",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Unofficial",
+      "version": "11.8",
+      "android": "16 (QPR2)",
+      "size": "",
+      "date": "2026-06-10",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Userdebug, signed, vanilla kernel. Link opens the maintainer's Drive folder.",
+      "url": "https://drive.google.com/drive/u/1/folders/1sV6ORJTNJBtK5ZbypGb7IvaN-KzZkyKl",
+      "source": "https://t.me/OnePlusNord2Updates/204",
+      "sha256": "508b9bcd06d9b1bb2ef6d2adeff4ec98caf695c14d8a59ff71145d1777563e1d",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Evolution-X/manifest/tree/bq2"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 11.7 — Unofficial (28 May)",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Unofficial",
+      "version": "11.7",
+      "android": "16 (QPR2)",
+      "size": "",
+      "date": "2026-05-28",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Userdebug, signed, vanilla kernel. Link opens the maintainer's Drive folder.",
+      "url": "https://drive.google.com/drive/u/1/folders/1sV6ORJTNJBtK5ZbypGb7IvaN-KzZkyKl",
+      "source": "https://t.me/OnePlusNord2Updates/200",
+      "sha256": "04a0fdf8c43922c83e00e6cb9106072509e282e10bda239ce24bd3ffc0bca656",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Evolution-X/manifest/tree/bq2"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 11.7 — Unofficial (7 May)",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Unofficial",
+      "version": "11.7",
+      "android": "16 (QPR2)",
+      "size": "",
+      "date": "2026-05-07",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Userdebug, signed, vanilla kernel. Link opens the maintainer's Drive folder.",
+      "url": "https://drive.google.com/drive/u/1/folders/1sV6ORJTNJBtK5ZbypGb7IvaN-KzZkyKl",
+      "source": "https://t.me/OnePlusNord2Updates/197",
+      "sha256": "9bee9bfbf97f9d72efc507744e5c36bf47a1eb875f67a06cdc94e5df3beed3ea",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Evolution-X/manifest/tree/bq2"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 11.6.1 — Unofficial",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Unofficial",
+      "version": "11.6.1",
+      "android": "16 (QPR2)",
+      "size": "",
+      "date": "2026-03-01",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Userdebug, signed, vanilla kernel. The maintainer notes the SukiSU kernel is no longer supported.",
+      "url": "https://drive.google.com/drive/u/1/folders/1sV6ORJTNJBtK5ZbypGb7IvaN-KzZkyKl",
+      "source": "https://t.me/OnePlusNord2Updates/191",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Evolution-X/manifest/tree/bq2"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 10.3.1 QPR1 — Unofficial",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Unofficial",
+      "version": "10.3.1 (QPR1)",
+      "size": "",
+      "date": "2025-03-25",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Android version isn't stated in the post. The earlier 10.2 build (10 Feb 2025, post 184) is in the same Drive folder.",
+      "url": "https://drive.google.com/drive/folders/1sV6ORJTNJBtK5ZbypGb7IvaN-KzZkyKl?usp=sharing",
+      "source": "https://t.me/OnePlusNord2Updates/185",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://github.com/Evolution-X/manifest/tree/vic-qpr1"
+        },
+        {
+          "label": "Support group",
+          "url": "https://t.me/OnePlusNord2GlobalOfficial"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 14 — Official",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Official",
+      "version": "official",
+      "android": "14",
+      "size": "3.34 GB",
+      "date": "2024-03-20",
+      "author": "lahaina",
+      "status": "untested",
+      "notes": "Build of 20 Mar 2024. An earlier build from 16 Feb 2024 (3.34 GB) was posted in message 177. The link goes to the Evolution X device page.",
+      "url": "https://evolution-x.org/device/denniz",
+      "source": "https://t.me/OnePlusNord2Updates/178",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://raw.githubusercontent.com/Evolution-X-Devices/official_devices/master/changelogs/denniz/evolution_denniz-ota-uq1a.240205.004-03202304-OFFICIAL.zip.txt"
+        },
+        {
+          "label": "XDA thread",
+          "url": "https://xdaforums.com/t/rom-14-evolution-x-for-oneplus-nord-2-5g-denniz.4531989/"
+        }
+      ]
+    },
+    {
+      "name": "Evolution X 13 — Official",
+      "folder": "roms",
+      "sub": "Evolution X",
+      "kind": "Official",
+      "version": "official",
+      "android": "13",
+      "size": "1.87 GB",
+      "date": "2023-06-20",
+      "author": "lahaina",
+      "status": "untested",
+      "notes": "Build of 20 Jun 2023. Earlier builds: 27 Mar 2023 (1.76 GB) and 11 Apr 2023 (1.9 GB). The link goes to the Evolution X device page.",
+      "url": "https://evolution-x.org/device/denniz",
+      "source": "https://t.me/OnePlusNord2Updates/171",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://raw.githubusercontent.com/Evolution-X-Devices/official_devices/master/changelogs/denniz/evolution_denniz-ota-tq3a.230605.012-06232122-unsigned.zip.txt"
+        },
+        {
+          "label": "XDA thread",
+          "url": "https://forum.xda-developers.com/t/rom-13-official-evolution-x-for-oneplus-nord-2-5g-denniz.4531989/"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 23.2 — 20260814_lineage",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "23.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20260814_lineage.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20260814_lineage",
+      "source": "https://t.me/OnePlusNord2Updates/208",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 23.2 — 20260705_lineage",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "23.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20260705_lineage.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20260705_lineage",
+      "source": "https://t.me/OnePlusNord2Updates/195",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 23.2 — 20260609_lineage",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "23.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20260609_lineage.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20260609_lineage",
+      "source": "https://t.me/OnePlusNord2Updates/203",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 23.2 — 20261004_lineage",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "23.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20261004_lineage. Signed build.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20261004_lineage",
+      "source": "https://t.me/OnePlusNord2Updates/193",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 23.2 — 20260103_lineage",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "23.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20260103_lineage. The maintainer says a clean flash is mandatory.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20260103_lineage",
+      "source": "https://t.me/OnePlusNord2Updates/190",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 23.2 — 20262202_lineage",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "23.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20262202_lineage. The maintainer says a clean flash is mandatory.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20262202_lineage",
+      "source": "https://t.me/OnePlusNord2Updates/189",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 22.2 — 20250727",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "22.2",
+      "android": "15",
+      "size": "",
+      "date": "",
+      "author": "ManshuTyagi (@ManshuTyagi)",
+      "status": "untested",
+      "notes": "GitHub release tag 20250727-lineage. Built for the realme X7 Max and the Nord 2. The maintainer says a clean flash is mandatory.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/20250727-lineage",
+      "source": "https://t.me/OnePlusNord2Updates/188",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "LineageOS 21.0 — Unofficial",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Unofficial",
+      "version": "21.0",
+      "android": "14",
+      "size": "",
+      "date": "2024-04-14",
+      "author": "lahaina & Zatvio",
+      "status": "untested",
+      "notes": "SourceForge folder dated 20240414.",
+      "url": "https://sourceforge.net/projects/project2by2-test/files/lineage-21/denniz/20240414/",
+      "source": "https://t.me/OnePlusNord2Updates/179",
+      "sha256": ""
+    },
+    {
+      "name": "2by2 Project (LineageOS 21) — Official",
+      "folder": "roms",
+      "sub": "LineageOS",
+      "kind": "Official",
+      "version": "21.0",
+      "android": "14",
+      "size": "",
+      "date": "2024-09-12",
+      "author": "lahaina",
+      "status": "untested",
+      "notes": "Official 2by2 Project build, September 2024 security patch. The link goes to the project's download page.",
+      "url": "https://project2by2.jp/download.htm?device=denniz",
+      "source": "https://t.me/OnePlusNord2Updates/181",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/twobytwoupdates"
+        }
+      ]
+    },
+    {
+      "name": "Lunaris-AOSP 3.10 — Official (3 Aug)",
+      "folder": "roms",
+      "sub": "Lunaris-AOSP",
+      "kind": "Official",
+      "version": "3.10",
+      "size": "",
+      "date": "2026-08-03",
+      "author": "Rakhshan (@shan_rakh)",
+      "status": "untested",
+      "notes": "GApps build. Link opens the SourceForge folder for op6893. The post doesn't state the Android version.",
+      "url": "https://sourceforge.net/projects/ghosuto/files/op6893/",
+      "source": "https://t.me/OnePlusNord2Updates/207",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://t.me/lunaris_dailyUP/1071"
+        },
+        {
+          "label": "Device changelog",
+          "url": "https://raw.githubusercontent.com/Lunaris-AOSP/OTA/refs/heads/16.2/changelogs/op6893.txt"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/ararchive_shan_rakh_discussion"
+        }
+      ]
+    },
+    {
+      "name": "Lunaris-AOSP 3.10 — Official (26 May)",
+      "folder": "roms",
+      "sub": "Lunaris-AOSP",
+      "kind": "Official",
+      "version": "3.10",
+      "size": "",
+      "date": "2026-05-26",
+      "author": "Rakhshan (@shan_rakh)",
+      "status": "untested",
+      "notes": "GApps build, direct download of the 2026052610 zip.",
+      "url": "https://sourceforge.net/projects/ghosuto/files/op6893/Lunaris-AOSP-op6893-OFFICIAL-3.10-GMS-2026052610.zip/download",
+      "source": "https://t.me/OnePlusNord2Updates/199",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://t.me/lunaris_dailyUP/899"
+        },
+        {
+          "label": "Device changelog",
+          "url": "https://raw.githubusercontent.com/Lunaris-AOSP/OTA/refs/heads/16.2/changelogs/op6893.txt"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/ararchive_shan_rakh_discussion"
+        }
+      ]
+    },
+    {
+      "name": "Lunaris-AOSP 3.8 — Unofficial",
+      "folder": "roms",
+      "sub": "Lunaris-AOSP",
+      "kind": "Unofficial",
+      "version": "3.8",
+      "size": "~2.4 GB",
+      "date": "2026-03-30",
+      "author": "Rakhshan (@shan_rakh)",
+      "status": "untested",
+      "notes": "GApps, userdebug, SELinux enforcing, release-key signed.",
+      "url": "https://github.com/Denniz-Cupida-Development/op6893_releases/releases/tag/%231",
+      "source": "https://t.me/OnePlusNord2Updates/192",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Report bugs",
+          "url": "https://github.com/Denniz-Cupida-Development/op6893_releases/issues"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/ararchive_shan_rakh_discussion"
+        }
+      ]
+    },
+    {
+      "name": "InfinityX 3.12 — Unofficial",
+      "folder": "roms",
+      "sub": "InfinityX",
+      "kind": "Unofficial",
+      "version": "3.12",
+      "size": "~2.8 GB",
+      "date": "2026-08-03",
+      "author": "Rakhshan (@shan_rakh)",
+      "status": "untested",
+      "notes": "GApps, user build, SELinux enforcing, release-key signed. The post doesn't state the Android version.",
+      "url": "https://github.com/Denniz-Cupida-Development/op6893_releases/releases/tag/%232",
+      "source": "https://t.me/OnePlusNord2Updates/206",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Support",
+          "url": "https://t.me/ararchive_shan_rakh_discussion"
+        }
+      ]
+    },
+    {
+      "name": "Axion AOSP 2.7 — Unofficial",
+      "folder": "roms",
+      "sub": "Axion AOSP",
+      "kind": "Unofficial",
+      "version": "2.7",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "@zatvio",
+      "status": "untested",
+      "notes": "Non-rooted build. Dirty flash only works over older Axion builds, otherwise do a clean install.",
+      "url": "https://sourceforge.net/projects/zatvio-builds/files/OP6893/",
+      "source": "https://t.me/OnePlusNord2Updates/201",
+      "sha256": "",
+      "links": [
+        {
+          "label": "All builds",
+          "url": "https://t.me/zatviobuilds"
+        },
+        {
+          "label": "Features",
+          "url": "https://github.com/AxionAOSP/axion_features"
+        }
+      ]
+    },
+    {
+      "name": "Axion AOSP 2.5 — Unofficial",
+      "folder": "roms",
+      "sub": "Axion AOSP",
+      "kind": "Unofficial",
+      "version": "2.5",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "@zatvio",
+      "status": "untested",
+      "notes": "Non-rooted build, clean flash mandatory. The same SourceForge folder also has the stock boot image mentioned in the post.",
+      "url": "https://sourceforge.net/projects/zatvio-builds/files/OP6893/",
+      "source": "https://t.me/OnePlusNord2Updates/194",
+      "sha256": "",
+      "links": [
+        {
+          "label": "All builds",
+          "url": "https://t.me/zatviobuilds"
+        },
+        {
+          "label": "Features",
+          "url": "https://github.com/AxionAOSP/axion_features"
+        }
+      ]
+    },
+    {
+      "name": "PixelOS 16.2 — Unofficial",
+      "folder": "roms",
+      "sub": "PixelOS",
+      "kind": "Unofficial",
+      "version": "16.2",
+      "android": "16",
+      "size": "",
+      "date": "",
+      "author": "Liwhy (@liwhy1) & ManshuTyagi",
+      "status": "untested",
+      "notes": "First Android 16 release. GitHub release tag pixelos_20250511.",
+      "url": "https://github.com/ManshuTyagi/releases/releases/tag/pixelos_20250511",
+      "source": "https://t.me/OnePlusNord2Updates/198",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Updates channel",
+          "url": "https://t.me/manshutyagii"
+        }
+      ]
+    },
+    {
+      "name": "RisingOS 6.2 — Unofficial",
+      "folder": "roms",
+      "sub": "RisingOS",
+      "kind": "Unofficial",
+      "version": "6.2",
+      "size": "",
+      "date": "2025-01-28",
+      "author": "Liwhy (@liwhy1)",
+      "status": "untested",
+      "notes": "Link opens the maintainer's Drive folder. The post doesn't state the Android version.",
+      "url": "https://drive.google.com/drive/u/2/folders/1pzSDJtwwkZ_FCEWny8fuHXgSVMbvyyaF",
+      "source": "https://t.me/OnePlusNord2Updates/183",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://github.com/RisingTechOSS/risingOS_changelogs"
+        },
+        {
+          "label": "Support",
+          "url": "http://t.me/OPNord2_devs"
+        }
+      ]
+    },
+    {
+      "name": "OxygenOS 15.0.0.701 (EX01) — Global port",
+      "folder": "roms",
+      "sub": "OxygenOS / ColorOS ports",
+      "kind": "Port",
+      "version": "15.0.0.701 (EX01)",
+      "android": "15",
+      "size": "",
+      "date": "",
+      "author": "@fjoInir",
+      "status": "untested",
+      "notes": "Ported to the Nord 2 from the OnePlus Nord 3 (CPH2493). Read the flashing guide and the bugs list before installing.",
+      "url": "https://drive.google.com/file/d/1Oq5WyCgt2eGBSQ9zY_7M0nWYfHnOnm3E/view?pli=1",
+      "source": "https://t.me/OnePlusNord2Updates/187",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Flashing guide",
+          "url": "https://telegra.ph/OxygenOS-15-Flashing-Guide-OnePlus-Nord-2-05-10"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://telegra.ph/OxygenOS-15-OnePlus-Nord-2-denniz-05-10"
+        },
+        {
+          "label": "Bugs",
+          "url": "https://telegra.ph/OxygenOS-15-Bugs-OnePlus-Nord2-05-10"
+        },
+        {
+          "label": "Credits",
+          "url": "https://telegra.ph/OxygenOS-15-Credits-OnePlus-Nord-2-05-10"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/OnePlusNord2GlobalOfficial"
+        }
+      ]
+    },
+    {
+      "name": "ColorOS 15.0.0.800 (CN) — Port",
+      "folder": "roms",
+      "sub": "OxygenOS / ColorOS ports",
+      "kind": "Port",
+      "version": "15.0.0.800",
+      "android": "15",
+      "size": "",
+      "date": "",
+      "author": "Frxncyyy",
+      "status": "untested",
+      "notes": "China-region ColorOS ported from the Oppo Find X7. Read the notes and bugs before installing.",
+      "url": "https://drive.google.com/file/d/1BB77SalV_MoGMX0Xp_Etfl6yAnjid3cz/view?usp=drive_link",
+      "source": "https://t.me/OnePlusNord2Updates/186",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Flashing guide",
+          "url": "https://telegra.ph/ColorOS-15-Port-for-OnePlus-Nord-2-5G---Flashing-Guide-12-31"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://telegra.ph/ColorOS-15--Changelog--denniz-05-03"
+        },
+        {
+          "label": "Notes",
+          "url": "https://telegra.ph/ColorOS-15--Notes--denniz-05-03"
+        },
+        {
+          "label": "Bugs",
+          "url": "https://telegra.ph/ColorOS-15--Bugs--denniz-05-03"
+        },
+        {
+          "label": "Credits",
+          "url": "https://telegra.ph/ColorOS-15--Credits--denniz-05-03"
+        }
+      ]
+    },
+    {
+      "name": "ColorOS 15 (CN) — Port, earlier build",
+      "folder": "roms",
+      "sub": "OxygenOS / ColorOS ports",
+      "kind": "Port",
+      "version": "",
+      "android": "15",
+      "size": "",
+      "date": "",
+      "author": "Frxncyyy",
+      "status": "untested",
+      "notes": "Earlier release of the Find X7 (PHZ110) port. The post doesn't state the exact build number.",
+      "url": "https://drive.google.com/file/d/1K5rJeiOO3NUJh1sE5MirYWtQa-zlDpNA/view",
+      "source": "https://t.me/OnePlusNord2Updates/182",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Flashing guide",
+          "url": "https://telegra.ph/ColorOS-15-Port-for-OnePlus-Nord-2-5G---Flashing-Guide-12-31"
+        }
+      ]
+    },
+    {
+      "name": "ArrowOS 13.1 — Unofficial",
+      "folder": "roms",
+      "sub": "ArrowOS",
+      "kind": "Unofficial",
+      "version": "13.1",
+      "android": "13",
+      "size": "",
+      "date": "2023-04-09",
+      "author": "lahaina",
+      "status": "untested",
+      "notes": "",
+      "url": "https://drive.google.com/file/d/1eN7NKt2mD-vPEQfDavs2QVxF5C1jxKpx/view?usp=drivesdk",
+      "source": "https://t.me/OnePlusNord2Updates/172",
+      "sha256": ""
+    },
+    {
+      "name": "ArrowOS 12.1 — Unofficial",
+      "folder": "roms",
+      "sub": "ArrowOS",
+      "kind": "Unofficial",
+      "version": "12.1",
+      "android": "12.1",
+      "size": "",
+      "date": "2022-07-07",
+      "author": "SakilMondal",
+      "status": "untested",
+      "notes": "Vanilla builds need GApps. A hotfix build (20220709) was announced in message 128. Needs the recovery from the Recoveries folder.",
+      "url": "https://www.pling.com/p/1816947/",
+      "source": "https://t.me/OnePlusNord2Updates/127",
+      "sha256": "",
+      "links": [
+        {
+          "label": "GApps",
+          "url": "https://androidfilehost.com/?fid=15664248565197177719"
+        },
+        {
+          "label": "Recovery",
+          "url": "https://www.pling.com/p/1849628/"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/aexdenniz"
+        }
+      ]
+    },
+    {
+      "name": "DerpFest 13 — Unofficial",
+      "folder": "roms",
+      "sub": "DerpFest",
+      "kind": "Unofficial",
+      "version": "13 (DerpSpace features)",
+      "android": "13",
+      "size": "1.35 GB",
+      "date": "2023-04-13",
+      "author": "P.A.N.Z. (@jakobBokaj1)",
+      "status": "untested",
+      "notes": "April 2023 security patch. Comes with its own recovery (see the Recoveries folder). The checksum is a separate file on Mega.",
+      "url": "https://mega.nz/file/xbcwHILB#iZ2V1jSNDmqp4-8MYLAml1gTPNxj1AHsKALfex0S7-M",
+      "source": "https://t.me/OnePlusNord2Updates/169",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Recovery",
+          "url": "https://mega.nz/file/ELsmHIZI#nwqGtauYFcU_bKDae4Fklrf2jx4cDELNFZHfmOmv3Vk"
+        },
+        {
+          "label": "Checksum file",
+          "url": "https://mega.nz/file/RXFH2SAJ#ROkMJllpOWQ7vkLgv5Qtz35yHWRz6tiyhFCnQiU-TD0"
+        },
+        {
+          "label": "XDA thread",
+          "url": "https://forum.xda-developers.com/t/rom-13-0-denniz-derpfest-13-unofficial-thirteen-aosp.4518801/"
+        }
+      ]
+    },
+    {
+      "name": "DerpFest 12 Community — Unofficial",
+      "folder": "roms",
+      "sub": "DerpFest",
+      "kind": "Unofficial",
+      "version": "12 Community",
+      "android": "12L",
+      "size": "",
+      "date": "2022-08-12",
+      "author": "SakilMondal",
+      "status": "untested",
+      "notes": "Latest of two builds (earlier: 20 Jul 2022, message 130). Needs the recovery from the Recoveries folder.",
+      "url": "https://www.pling.com/p/1860207/",
+      "source": "https://t.me/OnePlusNord2Updates/134",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Recovery",
+          "url": "https://www.pling.com/p/1849628/"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/aexdenniz"
+        }
+      ]
+    },
+    {
+      "name": "Pixel Experience Plus 12.1 — Unofficial",
+      "folder": "roms",
+      "sub": "Pixel Experience",
+      "kind": "Unofficial",
+      "version": "Plus",
+      "android": "12.1",
+      "size": "",
+      "date": "2022-10-14",
+      "author": "SakilMondal",
+      "status": "untested",
+      "notes": "Latest of five builds posted: 7 Jul, 3 Aug, 12 Aug, 18 Sep and 14 Oct 2022. Needs the recovery from the Recoveries folder.",
+      "url": "https://www.pling.com/p/1688250/",
+      "source": "https://t.me/OnePlusNord2Updates/145",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Recovery",
+          "url": "https://www.pling.com/p/1849628/"
+        },
+        {
+          "label": "XDA thread",
+          "url": "https://forum.xda-developers.com/t/rom-unofficial-12-pixelexperience-aosp-oneplus-nord-2-5g-denniz.4392521/"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/aexdenniz"
+        }
+      ]
+    },
+    {
+      "name": "Project Elixir 3.2 — Official (Beta)",
+      "folder": "roms",
+      "sub": "Project Elixir",
+      "kind": "Official",
+      "version": "3.2",
+      "android": "13",
+      "size": "",
+      "date": "2022-10-14",
+      "author": "SakilMondal",
+      "status": "untested",
+      "notes": "Built 14 Oct 2022. The post only gives an MD5: 554c021723ce46a95a68509915e4ce3d. Needs the recovery from the Recoveries folder.",
+      "url": "https://private.projectelixiros.com/thirteen/denniz/ProjectElixir_3.2_denniz-13.0-20221014-1830-BETA-OFFICIAL.zip",
+      "source": "https://t.me/OnePlusNord2Updates/146",
+      "sha256": "",
+      "links": [
+        {
+          "label": "Changelog",
+          "url": "https://github.com/ProjectElixir-Devices/Changelogs/blob/tiramisu/denniz.md"
+        },
+        {
+          "label": "Install guide",
+          "url": "https://github.com/ProjectElixir-Devices/Wiki/blob/tiramisu/denniz.md"
+        },
+        {
+          "label": "XDA thread",
+          "url": "https://forum.xda-developers.com/t/rom-13-0-denniz-project-elixir-official-thirteen-aosp.4506039/"
+        },
+        {
+          "label": "Recovery",
+          "url": "https://www.pling.com/p/1849628/"
+        }
+      ]
+    },
+    {
+      "name": "Android 13 build (name not stated)",
+      "folder": "roms",
+      "sub": "Other",
+      "kind": "Unofficial",
+      "version": "",
+      "android": "13",
+      "size": "1.88 GB",
+      "date": "2023-09-27",
+      "author": "Liwhy",
+      "status": "untested",
+      "notes": "The post doesn't name the ROM. Link opens the maintainer's Drive folder.",
+      "url": "https://drive.google.com/drive/folders/1Y-stHlWqbA6Tb9O0-i_vIgQrc_hWzMDK",
+      "source": "https://t.me/OnePlusNord2Updates/173",
+      "sha256": ""
+    },
+    {
+      "name": "TWRP 3.6.0_11-0 — unofficial",
+      "folder": "recoveries",
+      "sub": "TWRP",
+      "kind": "Unofficial",
+      "version": "3.6.0_11-0",
+      "size": "128 MB",
+      "date": "2021-12-21",
+      "author": "@TheMalachite",
+      "status": "untested",
+      "notes": "Synced with TWRP 3.6.0 sources and the prebuilt kernel updated to A.14. Flash steps are in the XDA thread.",
+      "url": "https://www.androidfilehost.com/?w=files&flid=328400",
+      "source": "https://t.me/OnePlusNord2Updates/47",
+      "sha256": "",
+      "links": [
+        {
+          "label": "XDA thread",
+          "url": "https://forum.xda-developers.com/t/recovery-unofficial-twrp-3-6-0_11-0-for-oneplus-nord-2-5g-denniz.4335021"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/TheMalachiteChat"
+        }
+      ]
+    },
+    {
+      "name": "TWRP 3.5.2_11-0 — unofficial",
+      "folder": "recoveries",
+      "sub": "TWRP",
+      "kind": "Unofficial",
+      "version": "3.5.2_11-0",
+      "size": "128 MB",
+      "date": "2021-09-15",
+      "author": "@TheMalachite",
+      "status": "untested",
+      "notes": "First unofficial TWRP build for the Nord 2. Flash steps are in the XDA thread.",
+      "url": "https://www.androidfilehost.com/?w=files&flid=328400",
+      "source": "https://t.me/OnePlusNord2Updates/36",
+      "sha256": "",
+      "links": [
+        {
+          "label": "XDA thread",
+          "url": "https://forum.xda-developers.com/t/recovery-unofficial-twrp-3-5-2_11-0-for-oneplus-nord-2-5g-denniz.4335021"
+        },
+        {
+          "label": "Support",
+          "url": "https://t.me/TheMalachiteChat"
+        }
+      ]
+    },
+    {
+      "name": "TWRP 3.7.0_11-0 — denniz",
+      "folder": "recoveries",
+      "version": "3.7.0_11-0",
+      "size": "",
+      "date": "",
+      "author": "TWRP",
+      "status": "untested",
+      "notes": "Official TWRP build for the Nord 2 from twrp.me.",
+      "url": "https://dl.twrp.me/denniz/twrp-3.7.0_11-0-denniz.img",
+      "source": "https://t.me/OPdump/39",
+      "sha256": "",
+      "sub": "TWRP"
+    },
+    {
+      "name": "DerpFest 13 recovery",
+      "folder": "recoveries",
+      "sub": "ROM recoveries",
+      "kind": "Unofficial",
+      "version": "",
+      "android": "13",
+      "size": "",
+      "date": "2023-04-13",
+      "author": "P.A.N.Z. (@jakobBokaj1)",
+      "status": "untested",
+      "notes": "Recovery that goes with the DerpFest 13 unofficial build in the ROMs folder.",
+      "url": "https://mega.nz/file/ELsmHIZI#nwqGtauYFcU_bKDae4Fklrf2jx4cDELNFZHfmOmv3Vk",
+      "source": "https://t.me/OnePlusNord2Updates/169",
+      "sha256": "",
+      "links": [
+        {
+          "label": "DerpFest 13 thread",
+          "url": "https://forum.xda-developers.com/t/rom-13-0-denniz-derpfest-13-unofficial-thirteen-aosp.4518801/"
+        }
+      ]
+    },
+    {
+      "name": "Recovery for the Android 12 / 13 ROMs",
+      "folder": "recoveries",
+      "sub": "ROM recoveries",
+      "kind": "Unofficial",
+      "version": "",
+      "size": "",
+      "date": "",
+      "author": "SakilMondal",
+      "status": "untested",
+      "notes": "Recovery listed in the ArrowOS 12.1, Pixel Experience Plus, DerpFest 12 and Project Elixir posts.",
+      "url": "https://www.pling.com/p/1849628/",
+      "source": "https://t.me/OnePlusNord2Updates/127",
+      "sha256": ""
+    },
+    {
+      "name": "Evolution X Recovery",
+      "folder": "recoveries",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "Evolution X",
+      "status": "untested",
+      "notes": "Recovery image for the denniz (op6893) from the Evolution X servers.",
+      "url": "https://cdn.evolution-x.org/op6893/16/recovery/recovery.img",
+      "source": "https://t.me/OPdump/39",
+      "sha256": "",
+      "sub": "ROM recoveries"
+    },
+    {
+      "name": "LineageOS Recovery",
+      "folder": "recoveries",
+      "version": "—",
+      "size": "",
+      "date": "",
+      "author": "LineageOS",
+      "status": "untested",
+      "notes": "Coming soon.",
+      "url": "",
+      "source": "https://t.me/OPdump/39",
+      "sha256": "",
+      "sub": "ROM recoveries"
+    },
+    {
+      "name": "Magisk",
+      "folder": "root",
+      "version": "latest",
+      "size": "",
+      "date": "",
+      "author": "topjohnwu",
+      "status": "untested",
+      "notes": "Official releases page. I'm not rooted on my main setup, so this is listed for reference.",
+      "url": "https://github.com/topjohnwu/Magisk/releases",
+      "source": "https://github.com/topjohnwu/Magisk",
+      "sha256": ""
+    },
+    {
       "name": "OxygenOS 13.0.0 Full ROM — F.59",
       "folder": "stock",
       "sub": "OxygenOS 13",
@@ -139,54 +1147,15 @@
       "sha256": ""
     },
     {
-      "name": "Evolution X Recovery",
-      "folder": "recoveries",
-      "version": "latest",
-      "size": "",
-      "date": "",
-      "author": "Evolution X",
-      "status": "untested",
-      "notes": "Recovery image for the denniz (op6893) from the Evolution X servers.",
-      "url": "https://cdn.evolution-x.org/op6893/16/recovery/recovery.img",
-      "source": "https://t.me/OPdump/39",
-      "sha256": ""
-    },
-    {
-      "name": "TWRP 3.7.0_11-0 — denniz",
-      "folder": "recoveries",
-      "version": "3.7.0_11-0",
-      "size": "",
-      "date": "",
-      "author": "TWRP",
-      "status": "untested",
-      "notes": "Official TWRP build for the Nord 2.",
-      "url": "https://dl.twrp.me/denniz/twrp-3.7.0_11-0-denniz.img",
-      "source": "https://t.me/OPdump/39",
-      "sha256": ""
-    },
-    {
-      "name": "LineageOS Recovery",
-      "folder": "recoveries",
-      "version": "—",
-      "size": "",
-      "date": "",
-      "author": "LineageOS",
-      "status": "untested",
-      "notes": "Coming soon.",
-      "url": "",
-      "source": "https://t.me/OPdump/39",
-      "sha256": ""
-    },
-    {
       "name": "Bulletproof denniz — BROM / fastboot restore files",
-      "folder": "stock",
+      "folder": "utilities",
       "sub": "Restore",
       "version": "preloader_ufs_c01 + lk_a20",
       "size": "",
       "date": "",
       "author": "giovix92 (hosting) · BROM bypass found by @NishantKumar6342",
       "status": "tested",
-      "notes": "Makes the phone brick-proof by restoring preloader and lk. Needs OxygenOS F.50 or lower with USB debugging on. See the guide below.",
+      "notes": "Restores the preloader and lk partitions so the phone can recover from a bad flash. Needs OxygenOS F.50 or lower with USB debugging on. Credit for the BROM bypass: @NishantKumar6342. Hosted on giovix92's SourceForge. See the BROM restore guide.",
       "url": "https://sourceforge.net/projects/giovix92-builds/files/denniz/extras/bulletproof_denniz.zip/download",
       "source": "https://t.me/OPdump/18",
       "sha256": ""
@@ -214,7 +1183,7 @@
       "date": "",
       "author": "",
       "status": "untested",
-      "notes": "Windows driver pack for ADB and fastboot on MediaTek phones.",
+      "notes": "Windows USB driver pack for ADB and fastboot on MediaTek phones such as the Nord 2. Install it before the flashing guides.",
       "url": "https://t.me/OPdump/7",
       "source": "",
       "sha256": ""
@@ -305,7 +1274,7 @@
     },
     {
       "name": "Flashing through MTKClient (auth bypass)",
-      "folder": "stock",
+      "folder": "utilities",
       "sub": "Restore",
       "version": "—",
       "size": "",
@@ -428,98 +1397,273 @@
       "url": "https://t.me/addtheme/MM63tEnjfp5gMbk2",
       "source": "https://t.me/OPdump/20",
       "sha256": ""
-    },
-    {
-      "name": "Magisk",
-      "folder": "root",
-      "version": "latest",
-      "size": "",
-      "date": "",
-      "author": "topjohnwu",
-      "status": "untested",
-      "notes": "Official releases page. I'm not rooted on my main setup, so this is listed for reference.",
-      "url": "https://github.com/topjohnwu/Magisk/releases",
-      "source": "https://github.com/topjohnwu/Magisk",
-      "sha256": ""
     }
   ],
   "guides": [
     {
+      "id": "how-it-works",
+      "title": "How this vault works",
+      "summary": "What the folders, tags and buttons on this site mean.",
+      "prereqs": [],
+      "steps": [
+        "Open the Files tab and pick a folder: ROMs, Recoveries, Root, Stock, Personal Vault or Utilities.",
+        "Use the chips inside a folder to narrow it down, for example one ROM family or only Drivers.",
+        "Read the status tag. Daily driver means I run it. Tested means it worked for me. Partial means it works with known bugs. Untested means I collected it but haven't tried it.",
+        "Read the badge. Official comes from the ROM's own team, Unofficial is a community build, and Port is made from another device's firmware.",
+        "Download opens the main file. Source opens the post where it was published. Extra buttons such as Changelog, XDA or Guide open the maintainer's own pages.",
+        "When a SHA-256 button is shown, copy it and compare it with the hash of your downloaded file."
+      ],
+      "warnings": [
+        "Most files here are linked from their authors' own pages. Unless a file is tagged Daily driver or Tested, I haven't verified it myself."
+      ],
+      "related": [
+        {
+          "label": "Open the Files tab",
+          "tab": "files"
+        }
+      ]
+    },
+    {
+      "id": "before-flashing",
       "title": "Before you flash anything",
+      "summary": "A checklist to run through before any flashing guide on this site.",
+      "prereqs": [
+        "A Nord 2 and its exact model, DN2101 (India) or DN2103 (EU)",
+        "A PC with platform-tools (ADB and fastboot) and the MTK USB driver installed",
+        "A backup of everything you care about"
+      ],
       "steps": [
-        "Charge the phone to at least 60%.",
-        "Back up photos, chats and app data to your PC or cloud.",
-        "Note your exact model (DN2101 or DN2103) under Settings → About phone.",
-        "Download only files made for your model.",
-        "Install the latest ADB / fastboot platform-tools on your PC."
+        "Open Settings, then About phone, and write down your model number (DN2101 or DN2103).",
+        "Back up photos, chats, authenticator codes and app data to a PC or cloud. Format-data steps erase internal storage.",
+        "Charge the phone to at least 60% so it can't power off during a flash.",
+        "Download only files made for your model and region, and read the maintainer's notes (for example whether a clean flash is required).",
+        "Verify the download when a SHA-256 is listed. On Windows run: certutil -hashfile <file> SHA256. On Linux or macOS run: sha256sum <file>. Then compare the two values.",
+        "Keep a stock OxygenOS package from the Stock folder on your PC so you can go back.",
+        "Connect the phone with USB debugging on and check that it appears when you run: adb devices"
+      ],
+      "warnings": [
+        "Flashing can brick the phone, void the warranty and erase your data. Read the BROM restore guide before you start so you know your way back."
+      ],
+      "related": [
+        {
+          "label": "Stock folder",
+          "folder": "stock"
+        },
+        {
+          "label": "Utilities folder",
+          "folder": "utilities"
+        }
       ]
     },
     {
+      "id": "choose-rom",
+      "title": "Choosing a custom ROM from the ROMs folder",
+      "summary": "How to read a ROM entry before you download it.",
+      "prereqs": [
+        "A completed 'Before you flash anything' checklist"
+      ],
+      "steps": [
+        "Pick a ROM family with the chips (Evolution X, LineageOS, Lunaris-AOSP and so on) and look at its newest entry first.",
+        "Check the Android version and the badge. Official builds come from the ROM team, Unofficial builds from individual maintainers, and Ports are built from another phone's firmware.",
+        "Open the Changelog, Bugs and Notes buttons when a ROM has them, and read them before downloading.",
+        "Follow the ROM's own flashing guide when it has one (the OxygenOS 15 and ColorOS 15 ports do). Several maintainers say a clean flash is mandatory, so back up first.",
+        "Flash GApps only when the ROM post says so. For example the ArrowOS 12.1 post says GApps are needed for vanilla builds only.",
+        "Check the SHA-256 when it is listed, or the checksum file for DerpFest 13.",
+        "If something goes wrong, use the revert-to-stock guide."
+      ],
+      "warnings": [
+        "These builds come from third-party maintainers. Their posts, changelogs and bug lists are the final word on how to install them."
+      ],
+      "related": [
+        {
+          "label": "ROMs folder",
+          "folder": "roms"
+        },
+        {
+          "label": "Recoveries folder",
+          "folder": "recoveries"
+        }
+      ]
+    },
+    {
+      "id": "revert-stock",
       "title": "Revert from an AOSP custom ROM to stock",
+      "summary": "Go back to OxygenOS 11.3 from a custom ROM using ADB sideload.",
+      "prereqs": [
+        "Platform-tools on your PC and the MTK USB driver installed",
+        "The OxygenOS 11.3 package for your model (EU DN2103 or IN DN2101) from the Stock folder",
+        "A backup, because formatting data erases the phone",
+        "The custom ROM's own recovery on the phone"
+      ],
       "steps": [
-        "Note your device model in Settings → About phone.",
-        "Download the stock ROM for your model from the Firmware section (EU DN2103 or IN DN2101).",
-        "Install platform-tools on your PC and open a terminal in that folder.",
-        "On the phone, reboot to the AOSP recovery and choose Apply Update → Using ADB.",
-        "On the PC run: adb devices",
-        "Then run: adb sideload oplus_ota_downgrade.zip",
+        "On the phone, open Settings, then About phone, and note the model.",
+        "Download the stock package for your model from the Stock folder.",
+        "On the PC open a terminal in the platform-tools folder.",
+        "Reboot the phone into the AOSP recovery and choose Apply Update, then Using ADB.",
+        "On the PC run: adb devices. The phone should be listed in sideload mode.",
+        "Run: adb sideload <package>.zip. The original post uses the file name oplus_ota_downgrade.zip.",
         "If your custom ROM was based on DN2103 (EU) firmware, flash the EU stock ROM first.",
-        "When flashing is done, format data and reboot to system.",
-        "Check that everything works: Wi-Fi, Bluetooth, audio and so on.",
-        "Only if you want to lock the bootloader and you are fully back on stock: reboot to the bootloader and run fastboot flashing lock."
+        "When flashing is complete, format data in recovery and reboot to system.",
+        "Check Wi-Fi, Bluetooth, audio, camera and mobile data.",
+        "Optional: to relock the bootloader, once you are fully back on stock, run adb reboot bootloader and then fastboot flashing lock."
+      ],
+      "warnings": [
+        "Do not lock the bootloader while a custom ROM or custom recovery is installed. The phone may refuse to boot."
+      ],
+      "credit": "Steps are from the OPN2-Dump channel.",
+      "related": [
+        {
+          "label": "Stock folder",
+          "folder": "stock"
+        },
+        {
+          "label": "Utilities folder",
+          "folder": "utilities"
+        }
       ]
     },
     {
+      "id": "dn2103-to-dn2101",
       "title": "Switch from DN2103 to DN2101 firmware (India users, optional)",
+      "summary": "Move an EU-firmware Nord 2 to the Indian OxygenOS 11.3 build with a local install.",
+      "prereqs": [
+        "An unlocked bootloader",
+        "A full backup, because this erases everything",
+        "The OxygenOS 11.3 IN package copied to the phone's internal storage"
+      ],
       "steps": [
-        "You need an unlocked bootloader and a full data backup, because this erases everything.",
-        "In Settings, turn off network access for the Software Update app so it can't push OTA updates meanwhile.",
+        "Open Settings and turn off network access for the Software Update app so it can't push OTA updates meanwhile.",
         "Enable Developer options by tapping the version number 5 to 6 times.",
         "Open Software Update, tap the three dots and choose Local install.",
-        "Select the OxygenOS 11.3 IN ROM, install it and reboot."
+        "Select the OxygenOS 11.3 IN ROM, install it and reboot.",
+        "If you want to relock the bootloader afterwards, reboot to the bootloader and run: fastboot flashing lock"
+      ],
+      "warnings": [
+        "Only lock the bootloader on a complete stock system."
+      ],
+      "credit": "Steps are from the OPN2-Dump channel.",
+      "related": [
+        {
+          "label": "Stock folder",
+          "folder": "stock"
+        }
       ]
     },
     {
+      "id": "brom-restore",
       "title": "Restore BROM / fastboot (make the phone brick-proof)",
+      "summary": "Flash the preloader and lk files so a bad flash can be recovered.",
+      "prereqs": [
+        "A fully charged phone",
+        "OxygenOS F.50 or lower with USB debugging on (tested on these builds)",
+        "The bulletproof_denniz.zip from the Utilities folder, extracted on your PC",
+        "Platform-tools and the MTK USB driver"
+      ],
       "steps": [
-        "Credit: @NishantKumar6342 discovered this BROM bypass.",
-        "You need a fully charged phone, OxygenOS F.50 or lower (tested) with USB debugging on, and the bulletproof_denniz zip from the Tools section.",
-        "Extract the zip and open a terminal inside the folder.",
+        "Extract all the files from the zip and open a terminal in that folder.",
         "Run: adb reboot fastboot",
         "Run: fastboot flash sda preloader_ufs_c01.img",
         "Run: fastboot flash sdb preloader_ufs_c01.img",
         "Run: fastboot flash lk lk_a20.bin",
         "Run: fastboot flash lk2 lk2_a20.bin",
         "Run: fastboot reboot"
+      ],
+      "warnings": [
+        "These commands overwrite the preloader and bootloader (lk) partitions. Use only the files from the zip, only on a Nord 2 (denniz), and do not unplug the phone during the flash."
+      ],
+      "credit": "The BROM bypass was discovered by @NishantKumar6342. The files are hosted on giovix92's SourceForge.",
+      "related": [
+        {
+          "label": "Utilities folder",
+          "folder": "utilities"
+        },
+        {
+          "label": "Stock folder (F.50)",
+          "folder": "stock"
+        }
       ]
     },
     {
+      "id": "debloat",
       "title": "Debloat with Shizuku and Canta (no root)",
+      "summary": "Remove system apps over wireless debugging without unlocking or rooting.",
+      "prereqs": [
+        "Shizuku and Canta Debloater installed (both are in the Utilities folder)",
+        "A Wi-Fi connection, because wireless debugging needs it"
+      ],
       "steps": [
-        "Install Shizuku and Canta Debloater from the Tools section.",
-        "Enable Wireless debugging in Developer options.",
-        "Pair Shizuku with your device using the official Shizuku setup guide.",
-        "Give Canta access in Shizuku.",
-        "Open Canta, select the apps you want to remove and tap Uninstall.",
-        "Warning: only remove apps marked Recommended. Removing core system packages can crash your system."
+        "Enable Developer options by tapping the version number 5 to 6 times, then turn on Wireless debugging.",
+        "Open Shizuku and pair it with the phone, following the official Shizuku setup guide.",
+        "Start Shizuku and allow Canta Debloater to use it.",
+        "Open Canta and select only apps marked Recommended.",
+        "Tap Uninstall and confirm."
+      ],
+      "warnings": [
+        "Only remove Recommended apps. Removing core system packages can crash or break the system."
+      ],
+      "links": [
+        {
+          "label": "Shizuku setup guide",
+          "url": "https://shizuku.rikka.app/guide/setup/"
+        }
+      ],
+      "credit": "Steps are from the OPN2-Dump channel.",
+      "related": [
+        {
+          "label": "Utilities folder",
+          "folder": "utilities"
+        }
       ]
     }
   ],
   "changelog": [
     {
       "date": "2026-10-14",
-      "title": "Files organised into folders",
-      "desc": "Split the file list into ROMs, Recoveries, Root, Stock, Personal Vault and Utilities."
+      "title": "Tabbed layout, ROM library and utilities clean-up",
+      "items": [
+        "The site now has four tabs: Files, Guides, Changelog and About.",
+        "ROMs folder filled with 35 builds across 13 ROM families from the OnePlus Nord 2 Updates channel.",
+        "Added recoveries from the same channel: TWRP 3.6.0_11-0, TWRP 3.5.2_11-0, the DerpFest 13 recovery and the recovery used by the Android 12 / 13 ROM posts.",
+        "Moved the BROM restore files and the MTKClient thread from Stock to Utilities. The MTK USB driver is in Utilities as well.",
+        "Guides rewritten with prerequisites, numbered steps, warnings and credits.",
+        "Files now list the Android version, the build type (Official, Unofficial or Port) and extra links such as changelogs and XDA threads.",
+        "The vault now lists 69 files in total."
+      ]
     },
     {
       "date": "2026-10-14",
-      "title": "Added files from my Telegram channel",
-      "desc": "Imported firmware, recoveries, tools, apps and guides from the OPN2-Dump channel."
+      "title": "Files organised into folders",
+      "items": [
+        "Split the file list into ROMs, Recoveries, Root, Stock, Personal Vault and Utilities.",
+        "Added a folder browser with breadcrumbs, filter chips inside folders and search across all folders.",
+        "Added Magisk (official releases page) to the Root folder."
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Imported files from my Telegram channel",
+      "items": [
+        "Added OxygenOS 13 builds F.46 to F.59 and OxygenOS 11.3 for the EU and IN models.",
+        "Added TWRP 3.7.0_11-0 and the Evolution X recovery.",
+        "Added the BROM restore files, USB driver, oplusdownloader, OPlus Info Tools, Shizuku, Canta, Fastboot Firmware Flasher and MT Manager.",
+        "Added icon packs, OnePlus Messages, Vela Maps, a list of music apps and a Telegram liquid glass theme."
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Liquid glass design and animations",
+      "items": [
+        "Frosted glass panels with a moving gradient background.",
+        "Cursor-following highlights, scroll reveals and glossy buttons.",
+        "Animations switch off automatically for people who use the reduce-motion setting."
+      ]
     },
     {
       "date": "2026-10-14",
       "title": "Vault created",
-      "desc": "Set up the repository and website for my Nord 2 (DN2101), currently on the latest OxygenOS 13."
+      "items": [
+        "Set up the repository and the website for my Nord 2 (DN2101), running the latest OxygenOS 13."
+      ]
     }
   ],
   "folders": [
@@ -527,13 +1671,13 @@
       "id": "roms",
       "name": "ROMs",
       "icon": "💿",
-      "desc": "Custom ROMs for the Nord 2"
+      "desc": "Custom ROMs and ports for the Nord 2, collected from the OnePlus Nord 2 Updates channel"
     },
     {
       "id": "recoveries",
       "name": "Recoveries",
       "icon": "🛠️",
-      "desc": "TWRP, Evolution X and other recovery images"
+      "desc": "TWRP and ROM-specific recovery images"
     },
     {
       "id": "root",
@@ -545,7 +1689,7 @@
       "id": "stock",
       "name": "Stock",
       "icon": "📦",
-      "desc": "Stock OxygenOS firmware and restore files"
+      "desc": "Stock OxygenOS firmware for the DN2101 and DN2103"
     },
     {
       "id": "vault",
@@ -557,7 +1701,130 @@
       "id": "utilities",
       "name": "Utilities",
       "icon": "🧰",
-      "desc": "Downloaders, drivers and flashing tools"
+      "desc": "Downloaders, USB drivers, BROM restore files and flashing tools"
     }
-  ]
+  ],
+  "about": {
+    "intro": [
+      "This is my personal vault for the OnePlus Nord 2 5G (codename denniz). It collects the firmware, recoveries, tools and extras I use or keep as backups, grouped into folders so you can find a file without scrolling through everything.",
+      "Nothing is hosted on this website. Each Download button points to the original source or to a post in my Telegram channel, and every entry shows who made it. The status tags show how much of it I have tested myself."
+    ],
+    "specs": [
+      {
+        "label": "Device",
+        "value": "OnePlus Nord 2 5G"
+      },
+      {
+        "label": "Codename",
+        "value": "denniz (op6893)"
+      },
+      {
+        "label": "Model numbers",
+        "value": "DN2101, DN2103"
+      },
+      {
+        "label": "Chipset",
+        "value": "MediaTek Dimensity 1200 (MT6893), 6 nm"
+      },
+      {
+        "label": "Display",
+        "value": "6.4-inch AMOLED, 90 Hz, 2400 × 1080"
+      },
+      {
+        "label": "Main camera",
+        "value": "50 MP with OIS"
+      },
+      {
+        "label": "Battery",
+        "value": "4500 mAh, up to 65 W Warp Charge"
+      },
+      {
+        "label": "Memory",
+        "value": "6 GB + 128 GB, 8 GB + 128 GB or 12 GB + 256 GB (UFS 3.1, no card slot)"
+      },
+      {
+        "label": "Launched",
+        "value": "July 2021 with Android 11"
+      }
+    ],
+    "variants": [
+      {
+        "model": "DN2101",
+        "region": "India (IN)",
+        "note": "Listed as IN in the firmware entries. This is my model."
+      },
+      {
+        "model": "DN2103",
+        "region": "Europe (EU)",
+        "note": "Listed as EU. Some custom ROMs are based on this firmware, so the revert guide says to flash the EU stock ROM first in that case."
+      }
+    ],
+    "legend": [
+      {
+        "status": "daily",
+        "meaning": "Installed on my phone and used every day."
+      },
+      {
+        "status": "tested",
+        "meaning": "Flashed or used and works, with notes where something is off."
+      },
+      {
+        "status": "partial",
+        "meaning": "Works, but has known bugs."
+      },
+      {
+        "status": "untested",
+        "meaning": "Linked or archived for reference. I haven't tested it myself."
+      }
+    ],
+    "credits": [
+      {
+        "name": "OnePlus",
+        "for": "OxygenOS firmware and the stock apps"
+      },
+      {
+        "name": "@NishantKumar6342",
+        "for": "Discovered the BROM bypass used in the restore guide"
+      },
+      {
+        "name": "giovix92",
+        "for": "Hosts the bulletproof_denniz restore files on SourceForge"
+      },
+      {
+        "name": "TWRP, Evolution X, LineageOS",
+        "for": "Recovery images"
+      },
+      {
+        "name": "topjohnwu",
+        "for": "Magisk"
+      },
+      {
+        "name": "RikkaApps and samolego",
+        "for": "Shizuku and Canta Debloater"
+      },
+      {
+        "name": "@Itz_0674",
+        "for": "The Telegram liquid glass theme settings"
+      },
+      {
+        "name": "Hovatek forum",
+        "for": "The MTKClient recovery thread"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub repo",
+        "url": "https://github.com/ayush04-op/OPN2-Dump-DN210X"
+      },
+      {
+        "label": "Telegram channel",
+        "url": "https://t.me/OPdump"
+      },
+      {
+        "label": "Report an issue",
+        "url": "https://github.com/ayush04-op/OPN2-Dump-DN210X/issues"
+      }
+    ],
+    "disclaimer": "Flashing custom software can brick your device, void your warranty or cause data loss. Everything here is provided as is, with no warranty. Back up your data and flash at your own risk. All ROMs, kernels, recoveries and tools belong to their original developers. If you are an author and want something credited differently or removed, open an issue on GitHub."
+  }
 }

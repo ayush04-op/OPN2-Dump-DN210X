@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0A0A0A">
   <title>OPN2-DN210X — Personal Vault</title>
-  <meta name="description" content="Personal collection of tested ROMs, kernels, recoveries, firmware and tools for the OnePlus Nord 2 (DN2101 / DN2103).">
+  <meta name="description" content="Personal collection of ROMs, recoveries, stock firmware and tools for the OnePlus Nord 2 (DN2101 / DN2103).">
   <meta property="og:title" content="OPN2-DN210X — Personal Vault">
-  <meta property="og:description" content="Tested ROMs, kernels, recoveries, firmware and tools for the OnePlus Nord 2 (DN2101 / DN2103).">
+  <meta property="og:description" content="ROMs, recoveries, stock firmware and tools for the OnePlus Nord 2 (DN2101 / DN2103).">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,29 +25,30 @@
 
 <header class="top">
   <div class="wrap top-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="#files" data-tab="files">
       <span class="brand-mark">OPN2</span><span class="brand-sep">/</span><span class="brand-sub">DN210X</span>
     </a>
-    <nav class="nav">
-      <a href="#files">Files</a>
-      <a href="#guides">Guides</a>
-      <a href="#changelog">Changelog</a>
-      <a href="#about">About</a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#files" data-tab="files">Files</a>
+      <a href="#guides" data-tab="guides">Guides</a>
+      <a href="#changelog" data-tab="changelog">Changelog</a>
+      <a href="#about" data-tab="about">About</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
 
-  <section class="hero wrap">
+  <section class="hero wrap" id="hero">
     <p class="eyebrow">PERSONAL ARCHIVE · ONEPLUS NORD 2 5G</p>
     <h1>Everything I use for my<br><span class="accent">Nord 2</span>, in one place.</h1>
-    <p class="lead">Tested ROMs, kernels, recoveries, firmware and tools for the DN2101 / DN2103 (codename <code>denniz</code>, Dimensity 1200). Each file is tagged with how well it worked for me.</p>
+    <p class="lead">ROMs, recoveries, stock firmware and tools for the DN2101 / DN2103 (codename <code>denniz</code>, Dimensity 1200). Every file carries a tag showing how well it worked for me, and a link back to where it was published.</p>
 
     <div class="setup" id="setup" aria-label="Current setup"></div>
   </section>
 
-  <section class="wrap" id="files">
+  <!-- ───────── Files tab ───────── -->
+  <section class="wrap panel" id="files" data-panel="files">
     <div class="section-head">
       <h2>Files</h2>
       <span class="count" id="count"></span>
@@ -65,36 +66,106 @@
     </div>
 
     <div class="crumbs" id="crumbs" hidden></div>
-
     <div class="folders" id="folders" aria-label="Folders"></div>
-
     <div class="chips" id="chips" aria-label="Sections in this folder" hidden></div>
-
     <div class="list" id="list" aria-live="polite" hidden></div>
   </section>
 
-  <section class="wrap" id="guides">
-    <div class="section-head"><h2>Guides</h2></div>
+  <!-- ───────── Guides tab ───────── -->
+  <section class="wrap panel" id="guides" data-panel="guides" hidden>
+    <div class="section-head"><h2>Guides</h2><span class="count" id="guideCount"></span></div>
+    <p class="panel-intro">Step-by-step guides for flashing, restoring and debloating the Nord 2. Each one lists what you need first, the steps in order, and what can go wrong. Tap a guide to open it.</p>
     <div id="guideList" class="guides"></div>
   </section>
 
-  <section class="wrap" id="changelog">
+  <!-- ───────── Changelog tab ───────── -->
+  <section class="wrap panel" id="changelog" data-panel="changelog" hidden>
     <div class="section-head"><h2>Changelog</h2></div>
+    <p class="panel-intro">A dated record of what was added or changed in this vault, newest first.</p>
     <ol id="logList" class="log"></ol>
   </section>
 
-  <section class="wrap" id="about">
+  <!-- ───────── About tab ───────── -->
+  <section class="wrap panel" id="about" data-panel="about" hidden>
     <div class="section-head"><h2>About</h2></div>
-    <div class="about">
-      <p>This is my personal vault for the OnePlus Nord 2 5G. I keep the things I have actually flashed and used, with honest notes on what worked and what didn't.</p>
-      <p class="muted">All ROMs, kernels, recoveries and tools belong to their original developers. Credit and source links are shown beside each file. If you are an author and want something credited differently or removed, open an issue on GitHub.</p>
-      <p class="warn"><strong>⚠ Disclaimer:</strong> Flashing custom software can brick your device, void your warranty or cause data loss. Everything here is provided as is, with no warranty. Back up your data and flash at your own risk.</p>
-      <p>
-        <a class="btn" href="https://github.com/ayush04-op/OPN2-Dump-DN210X" target="_blank" rel="noopener">GitHub repo</a>
-        <a class="btn ghost" href="https://t.me/OPdump" target="_blank" rel="noopener">Telegram channel</a>
-        <a class="btn ghost" href="https://github.com/ayush04-op/OPN2-Dump-DN210X/issues" target="_blank" rel="noopener">Report an issue</a>
-      </p>
+
+    <div class="about-grid">
+
+      <article class="about card-lite">
+        <h3>This vault</h3>
+        <p>This is a personal archive for the OnePlus Nord 2 5G, kept by the owner of a DN2101 running the latest OxygenOS 13. It collects stock firmware, custom ROMs, recoveries, drivers and everyday tools, each with notes on what it is and where it came from.</p>
+        <p class="muted">The stock firmware, tools and guides come from my own Telegram channel, OPN2-Dump. The custom ROM list was collected from the public OnePlus Nord 2 Updates channel, where ROM maintainers post their builds.</p>
+      </article>
+
+      <article class="about card-lite">
+        <h3>The device</h3>
+        <dl class="specs">
+          <div><dt>Name</dt><dd>OnePlus Nord 2 5G</dd></div>
+          <div><dt>Codename</dt><dd>denniz</dd></div>
+          <div><dt>Models</dt><dd>DN2101 (India), DN2103 (EU)</dd></div>
+          <div><dt>Chipset</dt><dd>MediaTek Dimensity 1200 (MT6893)</dd></div>
+          <div><dt>Build target</dt><dd>op6893</dd></div>
+          <div><dt>Storage</dt><dd>UFS</dd></div>
+          <div><dt>Shared builds</dt><dd>realme X7 Max 5G (RMX3031) uses the same op6893 ROM builds</dd></div>
+          <div><dt>My setup</dt><dd>DN2101 on the latest OxygenOS 13, not rooted</dd></div>
+        </dl>
+      </article>
+
+      <article class="about card-lite">
+        <h3>What is in each folder</h3>
+        <ul class="folder-list">
+          <li><a href="#f/roms">💿 ROMs</a> <span class="muted">Custom ROMs and ports from many maintainers. <span data-folder-count="roms"></span></span></li>
+          <li><a href="#f/recoveries">🛠️ Recoveries</a> <span class="muted">TWRP and the recoveries that go with specific ROMs. <span data-folder-count="recoveries"></span></span></li>
+          <li><a href="#f/root">🔓 Root</a> <span class="muted">Root tools. <span data-folder-count="root"></span></span></li>
+          <li><a href="#f/stock">📦 Stock</a> <span class="muted">OxygenOS 13 and OxygenOS 11.3 firmware. <span data-folder-count="stock"></span></span></li>
+          <li><a href="#f/vault">✨ Personal Vault</a> <span class="muted">Icon packs, themes and apps that are not device specific. <span data-folder-count="vault"></span></span></li>
+          <li><a href="#f/utilities">🧰 Utilities</a> <span class="muted">Downloaders, USB drivers, BROM restore files and flashing tools. <span data-folder-count="utilities"></span></span></li>
+        </ul>
+      </article>
+
+      <article class="about card-lite">
+        <h3>Tags and badges</h3>
+        <p class="muted small-title">Status tags</p>
+        <ul class="legend">
+          <li><span class="tag daily">✅ Daily driver</span> I run it every day.</li>
+          <li><span class="tag tested">🟢 Tested</span> It worked for me.</li>
+          <li><span class="tag partial">🟡 Partial</span> It works with known bugs.</li>
+          <li><span class="tag untested">⚪ Untested</span> Collected, but not tried by me.</li>
+        </ul>
+        <p class="muted small-title">Build badges</p>
+        <ul class="legend">
+          <li><span class="tag kind">Official</span> Built and released by the ROM's own team.</li>
+          <li><span class="tag kind">Unofficial</span> A community build from an individual maintainer.</li>
+          <li><span class="tag kind">Port</span> Made from another phone's firmware.</li>
+        </ul>
+      </article>
+
+      <article class="about card-lite wide">
+        <h3>Sources and credits</h3>
+        <p>Everything here belongs to its original authors. Each file links to the post where it was published, plus the maintainer's own changelog, bug list or thread when one exists.</p>
+        <p class="credits"><strong>ROMs and ports:</strong> Liwhy, ManshuTyagi, lahaina, Zatvio, Rakhshan, SakilMondal, Frxncyyy, fjoInir, P.A.N.Z. and the teams behind Evolution X, LineageOS, Lunaris-AOSP, InfinityX, Axion AOSP, PixelOS, RisingOS, ArrowOS, DerpFest, Pixel Experience and Project Elixir.</p>
+        <p class="credits"><strong>Recoveries and tools:</strong> TheMalachite (unofficial TWRP), NishantKumar6342 (BROM bypass), giovix92 (restore file hosting), Shizuku, Canta, MT Manager and the other authors named beside each file.</p>
+        <p class="muted">If you are an author and want something credited differently or removed, open an issue on GitHub.</p>
+      </article>
+
+      <article class="about card-lite wide">
+        <h3>Known gaps</h3>
+        <p class="muted">The ROM list was read from the public preview of the OnePlus Nord 2 Updates channel. A few older stretches of that channel could not be read, so some early 2021 to 2022 ROM builds may be missing. Each ROM family lists its newest builds first.</p>
+      </article>
+
+      <article class="about card-lite wide warn-box">
+        <h3>⚠ Disclaimer</h3>
+        <p>Flashing custom software can brick your device, void your warranty or cause data loss. Everything here is provided as is, with no warranty. Back up your data and flash at your own risk. Unless a file is tagged Daily driver or Tested, I have not verified it myself.</p>
+      </article>
+
     </div>
+
+    <p class="about-links">
+      <a class="btn" href="https://github.com/ayush04-op/OPN2-Dump-DN210X" target="_blank" rel="noopener">GitHub repo</a>
+      <a class="btn ghost" href="https://t.me/OPdump" target="_blank" rel="noopener">OPN2-Dump channel</a>
+      <a class="btn ghost" href="https://t.me/OnePlusNord2Updates" target="_blank" rel="noopener">Nord 2 Updates channel</a>
+      <a class="btn ghost" href="https://github.com/ayush04-op/OPN2-Dump-DN210X/issues" target="_blank" rel="noopener">Report an issue</a>
+    </p>
   </section>
 
 </main>
