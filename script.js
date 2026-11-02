@@ -376,10 +376,59 @@
     });
   }
 
+
+  /* ───────── Liquid glass: refraction filters (Chromium only; others keep the frosted blur) ───────── */
+  function initGlass() {
+    const ua = navigator.userAgent;
+    const chromium = /Chrom(e|ium)\//.test(ua) && !/Firefox|FxiOS|CriOS/.test(ua);
+    if (!chromium || !(window.CSS && CSS.supports("backdrop-filter", "blur(1px)"))) return;
+
+    // Displacement map: neutral grey in the middle, ramps at the edges that push the
+    // backdrop sideways, like light bending through a bevelled lens.
+    const map = (xb, yb) => {
+      const g = (id, x2, y2, a, b) =>
+        `<linearGradient id='${id}' x1='0' y1='0' x2='${x2}' y2='${y2}'><stop offset='0' stop-color='rgb(${a})'/><stop offset='1' stop-color='rgb(${b})'/></linearGradient>`;
+      const svg =
+        `<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200' preserveAspectRatio='none'>` +
+        `<defs>${g("l", 1, 0, "0,128,128", "128,128,128")}${g("r", 1, 0, "128,128,128", "255,128,128")}` +
+        `${g("t", 0, 1, "128,0,128", "128,128,128")}${g("b", 0, 1, "128,128,128", "128,255,128")}</defs>` +
+        `<rect width='200' height='200' fill='rgb(128,128,128)'/>` +
+        `<rect x='0' y='0' width='${xb}' height='200' fill='url(#l)'/>` +
+        `<rect x='${200 - xb}' y='0' width='${xb}' height='200' fill='url(#r)'/>` +
+        `<rect x='0' y='0' width='200' height='${yb}' fill='url(#t)'/>` +
+        `<rect x='0' y='${200 - yb}' width='200' height='${yb}' fill='url(#b)'/></svg>`;
+      return "data:image/svg+xml," + encodeURIComponent(svg);
+    };
+
+    // Three displaced copies (R, G, B at slightly different strengths) give the coloured fringe.
+    const filter = (id, xb, yb, sr, sg, sb) => {
+      const ch = (c, scale, m) =>
+        `<feDisplacementMap in='SourceGraphic' in2='m' scale='${scale}' xChannelSelector='R' yChannelSelector='G' result='d${c}'/>` +
+        `<feColorMatrix in='d${c}' type='matrix' values='${m}' result='${c}'/>`;
+      return (
+        `<filter id='${id}' x='0' y='0' width='100%' height='100%' color-interpolation-filters='sRGB'>` +
+        `<feImage href="${map(xb, yb)}" preserveAspectRatio='none' result='m'/>` +
+        ch("r", sr, "1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0") +
+        ch("g", sg, "0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0") +
+        ch("b", sb, "0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0") +
+        `<feBlend in='r' in2='g' mode='screen' result='rg'/><feBlend in='rg' in2='b' mode='screen'/></filter>`
+      );
+    };
+
+    document.body.insertAdjacentHTML(
+      "afterbegin",
+      `<svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;pointer-events:none"><defs>` +
+        filter("lg-wide", 6, 60, 26, 24, 22) +
+        filter("lg-card", 18, 18, 30, 27, 24) +
+        `</defs></svg>`
+    );
+    document.documentElement.classList.add("refract");
+  }
+
   /* ───────── Effects: cursor glass highlight + scroll reveal ───────── */
   function initFx() {
-    document.addEventListener(
-      "pointermove",
+    ["pointermove", "pointerdown"].forEach((evt) => document.addEventListener(
+      evt,
       (e) => {
         const t = e.target.closest && e.target.closest(".card, .folder, .about, .setup .cell");
         if (!t) return;
@@ -388,7 +437,7 @@
         t.style.setProperty("--my", e.clientY - r.top + "px");
       },
       { passive: true }
-    );
+    ));
 
     if (!("IntersectionObserver" in window)) return;
     const targets = document.querySelectorAll(
@@ -436,6 +485,7 @@
   }
 
   async function init() {
+    initGlass();
     $("year").textContent = new Date().getFullYear();
     bind();
     readHash();
