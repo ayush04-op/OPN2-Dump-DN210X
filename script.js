@@ -46,8 +46,9 @@
   function renderSetup(setup) {
     const box = $("setup");
     box.replaceChildren();
-    (setup || []).forEach(({ label, value }) => {
+    (setup || []).forEach(({ label, value }, i) => {
       const cell = el("div", "cell");
+      cell.style.setProperty("--i", i);
       cell.append(el("div", "k", label), el("div", "v", value));
       box.append(cell);
     });
@@ -444,10 +445,22 @@
       state.status = e.target.value;
       renderFiles();
     });
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (document.startViewTransition && !reduce.matches) document.documentElement.classList.add("vt");
     window.addEventListener("hashchange", () => {
-      readHash();
-      render();
-      toTop();
+      const go = () => {
+        readHash();
+        render();
+      };
+      if (document.documentElement.classList.contains("vt")) {
+        document.startViewTransition(() => {
+          go();
+          window.scrollTo({ top: 0, behavior: "instant" });
+        });
+      } else {
+        go();
+        toTop();
+      }
     });
     // "Back to top" shouldn't change the tab
     document.querySelectorAll('a[href="#top"]').forEach((a) =>
