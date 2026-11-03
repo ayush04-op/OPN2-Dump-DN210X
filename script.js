@@ -411,20 +411,8 @@
     );
   }
 
-  /* ───────── Effects: cursor glass highlight + scroll reveal ───────── */
+  /* ───────── Effects: scroll reveal ───────── */
   function initFx() {
-    document.addEventListener(
-      "pointermove",
-      (e) => {
-        const t = e.target.closest && e.target.closest(".card, .folder, .about, .setup .cell");
-        if (!t) return;
-        const r = t.getBoundingClientRect();
-        t.style.setProperty("--mx", e.clientX - r.left + "px");
-        t.style.setProperty("--my", e.clientY - r.top + "px");
-      },
-      { passive: true }
-    );
-
     if (!("IntersectionObserver" in window)) return;
     const targets = document.querySelectorAll(
       ".section-head, .toolbar, .panel-intro, .guide, .log li, .about, .about-links"
