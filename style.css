@@ -75,12 +75,6 @@ h1, h2, h3 { font-family: var(--serif); font-optical-sizing: auto; }
       background: radial-gradient(circle at 50% 50%, #ecd391, transparent 68%);
       opacity: .5;
       animation: drift2 28s ease-in-out infinite alternate-reverse, morph 16s ease-in-out infinite alternate; }
-.rules {
-  position: absolute; inset: 0;
-  background-image:
-    repeating-linear-gradient(0deg, transparent 0 31px, rgba(110, 80, 40, .08) 31px 32px),
-    linear-gradient(90deg, transparent calc(50% - 548px), rgba(181, 83, 46, .16) calc(50% - 548px), rgba(181, 83, 46, .16) calc(50% - 547px), transparent calc(50% - 547px));
-}
 .grain {
   position: absolute; inset: 0; opacity: .5; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .18  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
@@ -95,67 +89,26 @@ h1, h2, h3 { font-family: var(--serif); font-optical-sizing: auto; }
   100% { border-radius: 52% 48% 62% 38% / 40% 60% 40% 60%; }
 }
 
-/* ───────── Liquid glass material ─────────
-   Modelled on the optical layers of liquid-glass shaders: background blur, refraction
-   through a bevelled edge (SVG displacement map, Chromium only), colour fringing at the
-   edge, a specular highlight, a rim light and a soft drop shadow. */
-:root {
-  --lg-fill:
-    radial-gradient(130% 90% at 6% 0%, rgba(255, 255, 255, .62), transparent 52%),
-    radial-gradient(90% 70% at 100% 100%, rgba(255, 246, 228, .42), transparent 60%),
-    linear-gradient(135deg, rgba(255, 253, 246, .44), rgba(255, 250, 238, .2));
-  --lg-shadow:
-    0 16px 40px rgba(110, 80, 40, .16),
-    0 2px 6px rgba(110, 80, 40, .08),
-    inset 0 1px 1px rgba(255, 255, 255, .95),
-    inset 0 -14px 22px -14px rgba(255, 255, 255, .6),
-    inset 0 0 24px rgba(255, 255, 255, .16);
-  --lg-blur: blur(var(--blur)) saturate(170%) brightness(1.04);
-}
-
+/* ───────── Frosted paper-glass surfaces ───────── */
 .top, .setup, .card, details, .about, .empty, .device, .folder, .crumb-back,
 input[type="search"], select, .chip {
-  -webkit-backdrop-filter: var(--lg-blur);
-  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
+  backdrop-filter: blur(var(--blur)) saturate(160%);
 }
 
-.top, .setup, .card, details, .about, .empty, .device, .folder {
-  background: var(--lg-fill);
-  border: 1px solid rgba(255, 255, 255, .55);
-  box-shadow: var(--lg-shadow);
+.card, details, .about, .empty, .setup, .device, .folder {
+  background: var(--glass);
+  border: 1px solid var(--glass-brd);
+  box-shadow: var(--shadow), var(--inset);
 }
 
-/* Rim light: a bright edge on the lit corners that fades through the middle */
-.top::after, .setup::after, .card::after, .about::after, .device::after, details::after {
-  content: "";
-  position: absolute; inset: 0;
-  border-radius: inherit;
-  padding: 1.4px;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .1) 34%, rgba(255, 255, 255, .06) 64%, rgba(255, 255, 255, .85));
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
-}
-.setup, .device, details { position: relative; }
-
-/* Refraction + colour fringing where the browser can do it (filters are built in script.js) */
-.refract .top, .refract .setup {
-  -webkit-backdrop-filter: url(#lg-wide) blur(5px) saturate(170%) brightness(1.04);
-  backdrop-filter: url(#lg-wide) blur(5px) saturate(170%) brightness(1.04);
-}
-.refract .device, .refract .folder, .refract .about, .refract details, .refract .crumb-back {
-  -webkit-backdrop-filter: url(#lg-card) blur(6px) saturate(170%) brightness(1.04);
-  backdrop-filter: url(#lg-card) blur(6px) saturate(170%) brightness(1.04);
-}
-
-/* Specular highlight that follows the finger / cursor */
+/* Specular highlight that follows the cursor */
 .card, .about, .setup .cell, .folder { position: relative; }
 .card::before, .about::before, .setup .cell::before, .folder::before {
   content: "";
   position: absolute; inset: 0;
   border-radius: inherit;
-  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, .75), transparent 45%);
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, .7), transparent 45%);
   opacity: 0;
   transition: opacity .35s var(--ease);
   pointer-events: none;
@@ -168,6 +121,9 @@ input[type="search"], select, .chip {
   width: min(1040px, 100% - 24px);
   margin: 10px auto 0;
   border-radius: 999px;
+  background: rgba(250, 245, 232, .62);
+  border: 1px solid var(--glass-brd);
+  box-shadow: 0 8px 28px rgba(110, 80, 40, .14), var(--inset);
   animation: dropIn .8s var(--ease) both;
 }
 .top-inner { display: flex; align-items: center; justify-content: space-between; height: 54px; padding: 0 22px; width: 100%; }
@@ -238,11 +194,13 @@ h1 { font-size: clamp(2.1rem, 4.9vw, 3.5rem); line-height: 1.06; letter-spacing:
 .setup {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--rule);
   border-radius: var(--radius);
   overflow: hidden;
 }
-.setup .cell { background: transparent; padding: 16px 18px; box-shadow: inset -1px 0 0 var(--rule), inset 0 -1px 0 var(--rule); transition: background .25s; }
-.setup .cell:hover { background: rgba(255, 255, 255, .4); }
+.setup .cell { background: rgba(255, 252, 244, .72); padding: 16px 18px; transition: background .25s; }
+.setup .cell:hover { background: rgba(255, 255, 255, .92); }
 .setup .k { font-family: var(--mono); font-size: .66rem; letter-spacing: .13em; color: var(--muted); text-transform: uppercase; }
 .setup .v { font-weight: 600; margin-top: 4px; word-break: break-word; }
 
