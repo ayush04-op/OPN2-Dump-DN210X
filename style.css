@@ -131,7 +131,7 @@ input[type="search"], select, .chip {
 .brand-mark { color: var(--accent); }
 .brand-sep { color: var(--muted); margin: 0 4px; }
 .brand-sub { color: var(--ink); }
-.nav { display: flex; gap: 6px; }
+.nav { display: flex; gap: 6px; position: relative; }
 .nav a {
   position: relative;
   text-decoration: none; color: var(--muted); font-size: .9rem;
@@ -139,11 +139,7 @@ input[type="search"], select, .chip {
   transition: color .2s, background .2s;
 }
 .nav a:hover { color: var(--ink); background: rgba(255, 255, 255, .6); }
-.nav a.active {
-  color: var(--ink); font-weight: 600;
-  background: rgba(255, 255, 255, .8);
-  box-shadow: var(--inset), 0 3px 10px rgba(110, 80, 40, .14);
-}
+.nav a.active { color: var(--ink); }
 .nav a.active::after {
   content: ""; position: absolute; left: 50%; bottom: 2px; width: 14px; height: 2px;
   transform: translateX(-50%); border-radius: 2px;
@@ -506,3 +502,52 @@ details[open] summary::after { content: "–"; transform: rotate(180deg); backgr
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ───────── Menu + tap animations (transform/opacity only, so they stay cheap) ───────── */
+:root { --spring: cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+/* Sliding pill behind the active tab */
+.nav a { z-index: 1; font-weight: 500; overflow: hidden; }
+.nav a:hover { background: transparent; }
+.nav-pill {
+  position: absolute; left: 0; top: 0; z-index: 0; pointer-events: none;
+  width: var(--w, 0); height: var(--h, 0);
+  transform: translate(var(--x, 0), var(--y, 0));
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .85);
+  box-shadow: var(--inset), 0 3px 10px rgba(110, 80, 40, .14);
+  opacity: 0;
+}
+.nav-pill.ready {
+  opacity: 1;
+  transition: transform .5s var(--spring), width .5s var(--spring), opacity .25s;
+}
+
+/* Press feedback: quick squish down, springy release */
+.btn, .chip, .crumb-back, .nav a, .folder, summary {
+  transition-property: transform, background-color, box-shadow, color, opacity, border-color;
+  transition-duration: .32s;
+  transition-timing-function: var(--spring);
+}
+.btn:active, .chip:active, .crumb-back:active { transform: scale(.94); transition-duration: .1s; }
+.nav a:active { transform: scale(.92); transition-duration: .1s; }
+.folder:active { transform: translateY(0) scale(.965); transition-duration: .12s; }
+.folder:active .folder-icon { transform: scale(.88) rotate(-4deg); }
+.guide summary:active { transform: scale(.992); transition-duration: .1s; }
+.guide summary:active::after { transform: scale(.85); }
+
+/* Soft ripple from the touch point */
+.chip, .crumb-back { position: relative; overflow: hidden; }
+.ripple {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, .6), rgba(255, 255, 255, 0) 65%);
+  transform: scale(0); opacity: 1;
+  animation: ripple .6s var(--ease) forwards;
+}
+.btn.ghost .ripple, .chip:not(.active) .ripple, .crumb-back .ripple, .nav .ripple {
+  background: radial-gradient(circle, rgba(181, 83, 46, .22), rgba(181, 83, 46, 0) 65%);
+}
+@keyframes ripple { to { transform: scale(1); opacity: 0; } }
+
+/* Guides: content eases open */
+.guide[open] .g-body { animation: fadeUp .4s var(--ease) both; }

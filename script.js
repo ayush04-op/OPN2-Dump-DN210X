@@ -95,6 +95,7 @@
       if (on) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
     });
+    movePill();
     // The intro banner only belongs on the Files home view
     $("hero").hidden = !(state.tab === "files" && !state.folder);
   }
@@ -376,6 +377,40 @@
     });
   }
 
+
+  /* ───────── Menu pill + tap ripple ───────── */
+  function movePill() {
+    const pill = document.querySelector(".nav-pill");
+    const a = document.querySelector("#nav a.active");
+    if (!pill || !a) return;
+    pill.style.setProperty("--x", a.offsetLeft + "px");
+    pill.style.setProperty("--y", a.offsetTop + "px");
+    pill.style.setProperty("--w", a.offsetWidth + "px");
+    pill.style.setProperty("--h", a.offsetHeight + "px");
+    if (!pill.classList.contains("ready")) requestAnimationFrame(() => pill.classList.add("ready"));
+  }
+
+  function initTap() {
+    window.addEventListener("resize", movePill);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
+
+    document.addEventListener(
+      "pointerdown",
+      (e) => {
+        const t = e.target.closest && e.target.closest(".btn:not(.disabled), .chip, .crumb-back, .nav a");
+        if (!t) return;
+        const r = t.getBoundingClientRect();
+        const d = Math.max(r.width, r.height) * 2;
+        const dot = document.createElement("span");
+        dot.className = "ripple";
+        dot.style.cssText = `width:${d}px;height:${d}px;left:${e.clientX - r.left - d / 2}px;top:${e.clientY - r.top - d / 2}px`;
+        t.appendChild(dot);
+        dot.addEventListener("animationend", () => dot.remove());
+      },
+      { passive: true }
+    );
+  }
+
   /* ───────── Effects: cursor glass highlight + scroll reveal ───────── */
   function initFx() {
     document.addEventListener(
@@ -467,6 +502,7 @@
       console.error(err);
     }
     initFx();
+    initTap();
   }
 
   init();
